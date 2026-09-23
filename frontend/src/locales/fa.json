@@ -1,0 +1,475 @@
+{
+    "email": "با ما در ایمیل وصل شوید.",
+    "phone": "با ما در واتساپ وصل شوید.",
+
+    "nav.login": "وارد شدن",
+    "nav.call": "تماس با ما",
+    "nav.jobchance": "فرصت های شغلی",
+    "nav.export": "صادرات",
+    "nav.research": "تحقیقات",
+    "nav.gallery": "گالری",
+    "nav.controlquality": "کنتروبل کیفیت",
+    "nav.services": "خدمات",
+    "nav.products": "محصولات",
+    "nav.about": "در باره ما",
+    "nav.home": "صفحه اصلی",
+
+    "slider.ShowAllproduct": "مشاهده تمام محصولات",
+    "slider.contactUs": "تماس با ما",
+    "slider.slideAlt": "اسلاید {{n}}",
+    "slider.goToSlide": "رفتن به اسلاید {{n}}",
+    "slider.previousSlide": "اسلاید قبلی",
+    "slider.nextSlide": "اسلاید بعدی",
+
+    "common.retry": "تلاش مجدد",
+    "common.loading": "در حال بارگذاری...",
+    "common.error": "مشکلی پیش آمد. لطفاً دوباره تلاش کنید.",
+    "common.empty": "چیزی برای نمایش وجود ندارد.",
+
+    "header.selectLanguage": "انتخاب زبان",
+    "header.languageFa": "دری",
+    "header.languagePs": "پښتو",
+    "header.languageEn": "English",
+    "header.menuToggle": "نمایش/پنهان کردن منو",
+
+    "features.standardProduction.title": "تولید استاندرد",
+    "features.standardProduction.text": "ما برای تولید٫ به تکنولوژی های پیشرفته مقام اول بخشیدیم",
+
+    "features.qualityControl.title": "کنترول کیفیت",
+    "features.qualityControl.text": "ما در تمام بخش های پروسس و تولید آزمایشات خود را انجام می دهیم",
+
+    "features.naturalProducts.title": "محصولات طبیعی",
+    "features.naturalProducts.text": "ما بدون ازدیاد مواد اضافی و ناپاک تولید خود را انجام می دهیم",
+
+    "features.fastDelivery.title": "ارسال سریع",
+    "features.fastDelivery.text": "ما با تمام خدمات خود به طور ۲۴ ساعت در خدمت شما هستیم",
+
+    "features.globalExport.title": "صادرات جهانی",
+    "features.globalExport.text": "ما خدمات صادر شونده خود را در تمام جهان ارائه می دهیم",
+
+    "features.support.title": "پشتبانی/۲۴ ساعته",
+    "features.support.text": "همکار های ما ۲۴ ساعت در خدمت شما هستند",
+
+    "ourProduct.firstTitle": "بهترین انتخاب",
+    "ourProduct.secondTitle": "محصولات ما",
+    "ourproduct.milk": "شیر",
+    "ourproduct.musk": "چکه",
+    "ourproduct.yogurt": "ماست",
+    "ourproduct.drip": "مسکه",
+    "ourproduct.cheese": "پنیر",
+    "ourproduct.all.button": "مشاهده بیشتر",
+
+    "lacience.ourAchevment": "دست آورد ما",
+
+    "lacience.numberOfExprience": "۱۵+",
+    "lacience.exprience": "سال تجربه",
+
+    "lacience.numberOfProducts": "۲۵+",
+    "lacience.products": "نوع محصول",
+
+    "lacience.numberOfcapacity": "۲.۰۰۰+",
+    "lacience.capacityOfProduction": "ظرفیت تولید سالانه (تن)",
+
+    "lacience.numberOfEmployee": "۲۰۰+",
+    "lacience.specialistEmployee": "کارمند متخصص",
+
+    "lacience.numberOfCountry": "۱۵+",
+    "lacience.CountryForExpertation": "کشور صادراتی",
+
+    "lacience.numberOfCustomers": "۵.۰۰۰+",
+    "lacience.happyCustomers": "مشتری راضی",
+
+    "footer": {
+        "contact": "تماس",
+        "address": "افغانستان، کابل، پارک‌های صنعتی",
+        "services": "خدمات",
+        "service1": "پروسس محصولات زراعتی",
+        "service2": "بسته‌بندی و فرآوری",
+        "service3": "تولید محصولات غذایی",
+        "service4": "خدمات مشاوره‌ای",
+        "quickAccess": "دسترسی سریع",
+        "home": "صفحه اصلی",
+        "about": "درباره ما",
+        "servicesLink": "خدمات",
+        "products": "محصولات",
+        "company": "کارپال",
+        "companyDescription": "شرکت پروسس محصولات زراعتی و حیوانی",
+        "description": "در افغانستان، در حوزه کشاورزی، باغداری و محصولات غذایی، برای ارتقای کیفیت و تولید پایدار با ما همکاری می‌کنیم.",
+        "mapAlt": "نقشه",
+        "copyright": "تمام حقوق شرکت زراعتی کارپال محفوظ است",
+        "siteMap": "نقشه سایت",
+        "terms": "شرایط و قوانین",
+        "privacy": "سیاست حفظ حریم خصوصی"
+    },
+
+    "about": {
+        "badge": "درباره ما",
+        "title": "درباره شرکت کارپال",
+        "description": "شرکت کارپال با هدف ارائه خدمات قابل اعتماد، با کیفیت و سودمند برای مشتریان خود در عرصه‌های مختلف اقتصادی و اجتماعی فعالیت می‌کند. ما به همکاری، نوآوری و رضایت مشتریان باور داریم.",
+        "missionTitle": "ماموریت ما",
+        "missionText": "ماموریت ما این است که با استفاده از فناوری‌های مدرن و تیمی متخصص، راه‌حل‌های مؤثر و پایدار را برای مشتریان فراهم سازیم و به رشد و پیشرفت جامعه کمک کنیم.",
+        "visionTitle": "دیدگاه ما",
+        "visionText": "ما بر این باوریم که اعتماد، شفافیت و تعهد اصلی‌ترین ارزش‌های یک همکاری موفق هستند. به همین دلیل، همواره تلاش می‌کنیم خدمات خود را با استانداردهای بالا و در راستای نیازهای واقعی مشتریان ارائه کنیم."
+    },
+
+    "products": {
+        "store": "KARPPAL STORE",
+        "title": "محصولات ما",
+        "description": "انتخابی از بهترین کالاها برای خانه، دفتر و کسب‌وکار شما با کیفیت بالا و قیمت مناسب.",
+        "quickOrder": "سفارش سریع",
+
+        "stats": {
+            "products": "تعداد محصولات",
+            "customers": "رضایت مشتریان",
+            "delivery": "تحویل سریع",
+            "productCount": "+۱۲۰",
+            "customerRate": "۹۸٪",
+            "deliveryTime": "۲۴ ساعت"
+        },
+
+        "items": {
+            "milk": {
+                "title": "کیت لوازم اداری",
+                "description": "مجموعه‌ای کامل از لوازم اداری با کیفیت بالا برای دفتر و فضاهای کاری.",
+                "price": "۴۵۰.۰۰ د.ا",
+                "tag1": "اداری",
+                "tag2": "محبوب",
+                "alt": "کیت لوازم اداری"
+            },
+            "laptop": {
+                "title": "لپ‌تاپ پیشرفته",
+                "description": "لپ‌تاپ سریع و سبک مناسب برای کار، درس و استفاده روزمره در خانه و دفتر.",
+                "price": "۱۸,۵۰۰.۰۰ د.ا",
+                "tag1": "الکترونیکی",
+                "tag2": "جدید",
+                "alt": "لپ‌تاپ پیشرفته"
+            },
+            "desk": {
+                "title": "میز کار اداری",
+                "description": "میز کاری با طراحی مدرن و دوام بالا برای محیط‌های کاری حرفه‌ای و راحت.",
+                "price": "۷,۸۰۰.۰۰ د.ا",
+                "tag1": "فرتور",
+                "tag2": "پیشنهاد ویژه",
+                "alt": "میز کار اداری"
+            },
+            "bag": {
+                "title": "کیف حمل و نقل",
+                "description": "کیف با کیفیت و طراحی شیک برای حمل وسایل شخصی و اداری به‌صورت ایمن.",
+                "price": "۲,۲۰۰.۰۰ د.ا",
+                "tag1": "بسته‌بندی",
+                "tag2": "داغ",
+                "alt": "کیف حمل و نقل"
+            }
+        },
+
+        "buy": "خرید",
+        "viewAll": "مشاهده همه محصولات",
+        "loading": "در حال بارگذاری محصولات...",
+        "empty": "هنوز محصولی منتشر نشده است.",
+        "error": "بارگذاری محصولات ممکن نشد. لطفاً بعداً دوباره تلاش کنید."
+    },
+
+    "services": {
+        "badge": "خدمات ما",
+        "title": "راه‌حل‌های حرفه‌ای برای رشد کسب‌وکار شما",
+        "description": "در کارپال، ما خدماتی را ارائه می‌دهیم که کسب‌وکارها را در مسیر رشد، تحول دیجیتال و تجربه مشتری بهتر همراهی می‌کنند.",
+
+        "items": {
+            "business": {
+                "title": "مشاوره کسب‌وکار",
+                "description": "تحلیل نیازهای شما، شناسایی فرصت‌ها و طراحی راهبردهای مناسب برای رشد و موفقیت بلندمدت."
+            },
+            "web": {
+                "title": "طراحی و توسعه وب",
+                "description": "ساخت وب‌سایت‌ها و پلتفرم‌های مدرن با تجربه کاربری عالی، سرعت بالا و طراحی حرفه‌ای."
+            },
+            "app": {
+                "title": "توسعه اپلیکیشن",
+                "description": "طراحی اپلیکیشن‌های موبایل و تحت وب برای ارائه خدمات بهتر، افزایش تعامل مشتریان و رشد فروش."
+            },
+            "marketing": {
+                "title": "بازاریابی دیجیتال",
+                "description": "اجرای استراتژی‌های دیجیتال مارکتینگ، تبلیغات هدفمند و بهینه‌سازی کمپین‌ها برای جذب مشتریان بیشتر."
+            },
+            "support": {
+                "title": "حمایت فنی",
+                "description": "پشتیبانی مستمر، بروزرسانی سیستم‌ها و حل مشکلات فنی برای اجرای روان‌تر کسب‌وکار شما."
+            },
+            "ai": {
+                "title": "هوش مصنوعی و خودکارسازی",
+                "description": "استفاده از ابزارهای هوشمند برای خودکارسازی فرایندها، افزایش بهره‌وری و کاهش هزینه‌های عملیاتی."
+            }
+        },
+
+        "cta": {
+            "title": "آماده برای شروع یک پروژه جدید هستید؟",
+            "description": "با تیم ما در تماس باشید تا نیازها، اهداف و بهترین راه‌حل‌ها را برای کسب‌وکار شما بررسی کنیم.",
+            "button": "تماس با ما"
+        },
+        "loading": "در حال بارگذاری خدمات...",
+        "empty": "هنوز خدماتی منتشر نشده است.",
+        "error": "بارگذاری خدمات ممکن نشد. لطفاً بعداً دوباره تلاش کنید."
+    },
+
+
+
+    "contact": {
+        "hero": {
+            "badge": "تماس با ما",
+            "title": "با ما در تماس باشید",
+            "description": "اگر سوالی دارید یا به اطلاعات بیشتری نیاز دارید، تیم کارپال آماده پاسخ‌گویی و همکاری با شما است."
+        },
+
+        "info": {
+            "title": "اطلاعات تماس",
+            "description": "برای ارتباط با ما می‌توانید از یکی از راه‌های زیر استفاده کنید. ما در سریع‌ترین زمان ممکن پاسخ شما را خواهیم داد.",
+
+            "address": {
+                "title": "آدرس",
+                "text": "افغانستان، کابل، پارک‌های صنعتی"
+            },
+
+            "email": {
+                "title": "ایمیل"
+            },
+
+            "phone": {
+                "title": "شماره تماس"
+            },
+
+            "social": "ما را دنبال کنید"
+        },
+
+        "form": {
+            "badge": "ارسال پیام",
+            "title": "پیام خود را برای ما ارسال کنید",
+            "description": "فرم زیر را تکمیل کنید تا تیم ما با شما تماس بگیرد.",
+
+            "name": "نام شما",
+            "namePlaceholder": "نام خود را وارد کنید",
+
+            "phone": "شماره تماس",
+            "phonePlaceholder": "شماره تماس",
+
+            "email": "ایمیل",
+            "emailPlaceholder": "example@email.com",
+
+            "subject": "موضوع",
+            "subjectPlaceholder": "موضوع پیام",
+
+            "message": "پیام",
+            "messagePlaceholder": "پیام خود را بنویسید...",
+
+            "submit": "ارسال پیام",
+            "sending": "در حال ارسال...",
+            "successMessage": "پیام شما ارسال شد. به زودی با شما تماس خواهیم گرفت.",
+            "errorGeneric": "ارسال پیام شما ممکن نشد. لطفاً ایمیل یا شماره تماس را وارد کرده و دوباره تلاش کنید."
+        },
+
+        "map": {
+            "alt": "موقعیت شرکت کارپال",
+            "button": "مشاهده موقعیت روی نقشه"
+        }
+    },
+
+    "research": {
+        "eyebrow": "کارپال",
+        "title": "تحقیقات و نشریات",
+        "subtitle": "آخرین تحقیقات، یافته‌ها و تحولات تیم ما را دنبال کنید.",
+        "loading": "در حال بارگذاری تحقیقات...",
+        "empty": "تحقیقی موجود نیست.",
+        "error": "بارگذاری تحقیقات ممکن نشد. لطفاً بعداً دوباره تلاش کنید.",
+        "featuredBadge": "تحقیق ویژه",
+        "categoryFallback": "تحقیقات",
+        "readMore": "ادامه مطلب",
+        "backToList": "بازگشت به تحقیقات",
+        "byAuthor": "نویسنده: {{author}}",
+        "notFound": "این تحقیق یافت نشد."
+    },
+
+    "gallery": {
+        "eyebrow": "گالری کارپال",
+        "title": "تولیدات و فعالیت‌های ما را در یک نگاه ببینید",
+        "loading": "در حال بارگذاری گالری...",
+        "empty": "تصویری موجود نیست.",
+        "error": "بارگذاری گالری ممکن نشد. لطفاً بعداً دوباره تلاش کنید."
+    },
+
+    "jobs": {
+        "title": "فرصت‌های کاری",
+        "applyButton": "درخواست شغل",
+        "cards": {
+            "freshTitle": "فرصت‌های تازه",
+            "freshText": "فهرست فرصت‌های کاری به‌صورت مداوم تازه می‌شود و برای بازار کار فعلی مناسب است.",
+            "nationalTitle": "ملی و بین‌المللی",
+            "nationalText": "فرصت‌ها در بخش‌های مختلف، از فرصت‌های محلی تا بین‌المللی موجود می‌باشد.",
+            "growthTitle": "رشد شخصی",
+            "growthText": "برای کارکنان و کاندیداها، دوره‌ها، آموزش‌ها و فرصت‌های رشد موجود است."
+        },
+        "recentTitle": "فرصت‌های اخیر",
+        "postingsCount": "{{count}} اعلان",
+        "loading": "در حال بارگذاری فرصت‌ها...",
+        "empty": "در حال حاضر فرصت شغلی موجود نیست.",
+        "error": "بارگذاری فرصت‌های شغلی ممکن نشد. لطفاً بعداً دوباره تلاش کنید.",
+        "activeBadge": "فعال",
+        "applyForPosition": "درخواست برای این موقعیت ←",
+        "sidebar": {
+            "activeOpportunities": "فرصت‌های فعال",
+            "activeOpportunitiesDesc": "تعداد فرصت‌های کاری موجود در حال حاضر.",
+            "guideTitle": "راهنما",
+            "guideResume": "آماده‌سازی رزومه",
+            "guideExplore": "شناخت فرصت‌ها",
+            "guideGrow": "رشد مهارت‌ها در بازار کار"
+        },
+        "employmentTypes": {
+            "fullTime": "تمام وقت",
+            "partTime": "نیمه وقت",
+            "remote": "دورکاری",
+            "contract": "قراردادی"
+        }
+    },
+
+    "jobApplication": {
+        "eyebrow": "کارپال",
+        "title": "فرم درخواست شغل",
+        "successMessage": "درخواست شما با موفقیت ثبت شد. تیم ما به زودی با شما تماس خواهد گرفت.",
+        "errorMessage": "ثبت درخواست ناکام شد. لطفاً دوباره تلاش کنید.",
+        "sectionTitle": "اطلاعات کلی",
+        "sectionBadge": "جزئیات درخواست",
+        "firstName": "نام:",
+        "firstNamePlaceholder": "نام خود را وارد کنید",
+        "applicationDate": "تاریخ درخواست:",
+        "lastName": "تخلص:",
+        "lastNamePlaceholder": "تخلص خود را وارد کنید",
+        "country": "کشور شما:",
+        "countryPlaceholder": "افغانستان",
+        "phone": "شماره تماس:",
+        "phonePlaceholder": "۰۷۸۰ ۱۹۴ ۶۳۲",
+        "gender": "جنسیت",
+        "genderSelect": "انتخاب کنید",
+        "genderMale": "مذکر",
+        "genderFemale": "مونث",
+        "descriptionLabel": "توضیحات",
+        "descriptionPlaceholder": "توضیحات اضافی در مورد شما",
+        "cancel": "انصراف",
+        "submit": "ثبت درخواست",
+        "submitting": "در حال ارسال..."
+    },
+
+    "all": {
+        "eyebrow": "مجموعه کارپال",
+        "title": "همه محصولات",
+        "searchPlaceholder": "جستجوی محصول...",
+        "loading": "در حال بارگذاری محصولات...",
+        "empty": "محصولی یافت نشد.",
+        "error": "بارگذاری محصولات ممکن نشد. لطفاً بعداً دوباره تلاش کنید.",
+        "categoryLabel": "دسته‌بندی",
+        "orderButton": "سفارش",
+        "previous": "قبلی",
+        "next": "بعدی",
+        "pageOf": "صفحه {{page}} از {{totalPages}}"
+    },
+
+    "exportPage": {
+        "eyebrow": "کارپال",
+        "title": "صفحه صادرات",
+        "exportReportButton": "صادر کردن راپور",
+        "liveMonitoring": "نظارت لحظه‌ای",
+        "liveBadge": "زنده",
+        "monitoringTitle": "نظارت بر صادرات",
+        "activeBadge": "فعال",
+        "stats": {
+            "totalExports": "مجموع صادرات",
+            "totalExportsGrowth": "+۱۲.۴٪ نسبت به ماه قبلی",
+            "completedOrders": "سفارشات تکمیل شده",
+            "completedOrdersGrowth": "+۸.۲٪ رشد",
+            "pending": "در حال انتظار",
+            "pendingNote": "۱۴ مورد نیاز بررسی"
+        },
+        "recentListTitle": "لیست آخرین صادرات",
+        "viewAll": "مشاهده همه",
+        "table": {
+            "invoice": "شماره فاکتور",
+            "country": "کشور",
+            "amount": "مقدار",
+            "status": "وضعیت"
+        },
+        "countries": {
+            "uae": "امارات متحده عربی",
+            "germany": "آلمان",
+            "canada": "کانادا"
+        },
+        "statuses": {
+            "completed": "تکمیل شده",
+            "shipping": "در حال حمل",
+            "pending": "در انتظار"
+        },
+        "summaryTitle": "خلاصه عملکرد",
+        "thisMonth": "این ماه",
+        "summary": {
+            "shipped": "پیمان‌های ارسال شده",
+            "onTime": "تحویل به موقع",
+            "satisfaction": "رضایت مشتری"
+        },
+        "recentNotes": "توضیحات اخیر",
+        "internationalShipping": "حمل و نقل بین‌المللی",
+        "internationalShippingText": "روند صادرات در ماه جاری با رشد قابل توجهی همراه بوده و میزان تحویل‌ها در بازارهای هدف به‌طور مستمر در حال افزایش است.",
+        "moreDetails": "جزئیات بیشتر"
+    },
+
+    "controlQuality": {
+        "title": "سیستم کنترول کیفیت",
+        "projectLabel": "پروژه",
+        "stats": {
+            "samples": "تعداد نمونه‌ها",
+            "today": "امروز",
+            "acceptanceRate": "نرخ پذیرش",
+            "inReview": "در حال بررسی",
+            "activeBadge": "فعال",
+            "inReviewNote": "باید در ۲ ساعت آینده بررسی شود",
+            "issues": "مشکلات ثبت‌شده",
+            "criticalBadge": "حساس",
+            "issuesNote": "۳ مورد نیاز به پیگیری فوری دارد"
+        },
+        "reviewEyebrow": "بازبینی کیفیت",
+        "dailyReportTitle": "کارنامه روزانه",
+        "newResultButton": "ثبت نتیجه جدید",
+        "checks": {
+            "colorCoating": "بررسی رنگ و روکش",
+            "dimensions": "کنترل ابعاد و اندازه",
+            "performance": "تست عملکرد"
+        },
+        "todayStatus": "وضعیت امروز",
+        "shortReport": "گزارش کوتاه",
+        "approvedSamples": "تعداد نمونه‌های تأیید شده",
+        "rejectedSamples": "تعداد ردشدگی‌ها",
+        "avgReviewTime": "میانگین زمان بررسی",
+        "topSectionsEyebrow": "لیست فعال‌ترین بخش‌ها",
+        "reportsTitle": "گزارش‌های کنترل کیفیت",
+        "showAll": "نمایش همه",
+        "sections": {
+            "production": "بخش تولید",
+            "packaging": "بخش بسته‌بندی",
+            "assembly": "بخش مونتاژ",
+            "delivery": "بخش تحویل"
+        }
+    },
+
+    "login": {
+        "title": "ورود به سیستم",
+        "subtitle": "لطفاً اطلاعات حساب خود را وارد نمایید.",
+        "invalidCredentials": "ایمیل یا رمز عبور اشتباه است.",
+        "emailLabel": "نام کاربری یا ایمیل",
+        "emailPlaceholder": "example@karpal.com",
+        "passwordLabel": "رمز عبور",
+        "passwordPlaceholder": "رمز عبور خود را وارد کنید",
+        "showPassword": "نمایش رمز عبور",
+        "hidePassword": "پنهان کردن رمز عبور",
+        "rememberMe": "مرا به خاطر بسپار",
+        "forgotPassword": "رمز عبور را فراموش کرده‌ام",
+        "submitting": "در حال ورود...",
+        "submit": "ورود",
+        "noAccount": "حساب ندارید؟",
+        "signUp": "ثبت نام کنید"
+    }
+}

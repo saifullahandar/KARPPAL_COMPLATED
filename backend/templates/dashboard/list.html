@@ -1,0 +1,85 @@
+{% extends "dashboard/base.html" %}
+{% block title %}{{ module.label }}{% endblock %}
+{% block page_title %}{{ module.label }}{% endblock %}
+
+{% block content %}
+<div class="panel">
+    <div class="list-toolbar">
+        <form class="search-form" method="get">
+            {% if module.search_fields %}
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    <input class="form-control" type="search" name="q" value="{{ query }}" placeholder="Search {{ module.label|lower }}...">
+                </div>
+            {% endif %}
+        </form>
+        {% if module.allow_add %}
+            <a class="btn btn-success" href="{% url 'dashboard:module-add' module.slug %}">
+                <i class="bi bi-plus-lg"></i> Add {{ module.label }}
+            </a>
+        {% endif %}
+    </div>
+
+    {% if rows %}
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead>
+                    <tr>
+                        {% for col in columns %}<th>{{ col|title }}</th>{% endfor %}
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in rows %}
+                        <tr>
+                            {% for cell in row.cells %}
+                                <td>
+                                    {% if cell == True %}
+                                        <span class="badge-status badge-active">Yes</span>
+                                    {% elif cell == False %}
+                                        <span class="badge-status badge-inactive">No</span>
+                                    {% else %}
+                                        {{ cell|default:"—"|truncatechars:60 }}
+                                    {% endif %}
+                                </td>
+                            {% endfor %}
+                            <td class="text-end action-cell">
+                                <a class="btn btn-sm btn-outline-secondary" href="{% url 'dashboard:module-edit' module.slug row.obj.pk %}">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                {% if module.allow_delete %}
+                                    <a class="btn btn-sm btn-outline-danger" href="{% url 'dashboard:module-delete' module.slug row.obj.pk %}">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        {% if is_paginated %}
+            <nav class="pagination-bar">
+                <ul class="pagination">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if query %}&q={{ query }}{% endif %}">Previous</a></li>
+                    {% endif %}
+                    <li class="page-item disabled"><span class="page-link">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span></li>
+                    {% if page_obj.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}{% if query %}&q={{ query }}{% endif %}">Next</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
+    {% else %}
+        <div class="empty-state-block">
+            <i class="bi bi-inbox"></i>
+            <p>No {{ module.label|lower }} found{% if query %} for "{{ query }}"{% endif %}.</p>
+            {% if module.allow_add %}
+                <a class="btn btn-success" href="{% url 'dashboard:module-add' module.slug %}">Add the first one</a>
+            {% endif %}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

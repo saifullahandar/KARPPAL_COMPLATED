@@ -1,0 +1,16 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Delete {{ module.label }}{% endblock %}
+{% block page_title %}Delete {{ module.label }}{% endblock %}
+
+{% block content %}
+<div class="panel form-panel">
+    <p>Are you sure you want to delete <strong>{{ object }}</strong>? This cannot be undone.</p>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-actions">
+            <a class="btn btn-outline-secondary" href="{% url 'dashboard:module-list' module.slug %}">Cancel</a>
+            <button class="btn btn-danger" type="submit"><i class="bi bi-trash"></i> Delete</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

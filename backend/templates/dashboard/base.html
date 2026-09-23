@@ -1,0 +1,105 @@
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Dashboard{% endblock %} · Karppal</title>
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap-icons/font/bootstrap-icons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/css/dashboard.css' %}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+<div class="dashboard-shell">
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <span class="brand-mark">ک</span>
+            <div>
+                <div class="brand-name">Karppal</div>
+                <div class="brand-sub">Dashboard</div>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'dashboard:home' %}">
+                <i class="bi bi-speedometer2"></i> Dashboard
+            </a>
+            <a class="nav-link {% if request.resolver_match.url_name == 'analytics' %}active{% endif %}" href="{% url 'dashboard:analytics' %}">
+                <i class="bi bi-bar-chart-line"></i> Website Analytics
+            </a>
+
+            {% for group, mods in groups %}
+                {% if group != "Users" or request.user.is_dashboard_admin %}
+                    <div class="nav-group-title">{{ group }}</div>
+                    {% for mod in mods %}
+                        {% if not mod.admin_only or request.user.is_dashboard_admin %}
+                            <a class="nav-link {% if module.slug == mod.slug %}active{% endif %}" href="{% url 'dashboard:module-list' mod.slug %}">
+                                <i class="bi {{ mod.icon }}"></i> {{ mod.label }}
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+
+            {% if request.user.is_dashboard_admin %}
+                <div class="nav-group-title">Settings</div>
+                <a class="nav-link {% if request.resolver_match.url_name == 'company-info' %}active{% endif %}" href="{% url 'dashboard:company-info' %}">
+                    <i class="bi bi-building"></i> Company Information
+                </a>
+            {% endif %}
+        </nav>
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <div class="main-area">
+        <header class="topbar">
+            <button class="btn btn-icon d-lg-none" id="sidebarToggle" aria-label="Toggle sidebar">
+                <i class="bi bi-list"></i>
+            </button>
+            <h1 class="page-title">{% block page_title %}Dashboard{% endblock %}</h1>
+
+            <div class="topbar-right">
+                <a class="btn btn-sm btn-outline-secondary" href="/api/v1/docs/" target="_blank">
+                    <i class="bi bi-code-slash"></i> API Docs
+                </a>
+                <div class="dropdown">
+                    <button class="btn btn-user dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-person-circle"></i>
+                        <span class="d-none d-sm-inline">{{ request.user.get_full_name|default:request.user.email }}</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><span class="dropdown-item-text text-muted small">{{ request.user.get_role_display }}</span></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <form method="post" action="{% url 'dashboard:logout' %}">
+                                {% csrf_token %}
+                                <button class="dropdown-item" type="submit"><i class="bi bi-box-arrow-right"></i> Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+</div>
+
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'dashboard/js/dashboard.js' %}"></script>
+{% block extra_scripts %}{% endblock %}
+</body>
+</html>

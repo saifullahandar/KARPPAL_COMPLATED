@@ -1,0 +1,109 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% block title %}Overview{% endblock %}
+{% block page_title %}Overview{% endblock %}
+
+{% block content %}
+<div class="stat-grid">
+    {% for stat in stats %}
+        <a class="stat-card" href="{% url 'dashboard:module-list' stat.url %}">
+            <div class="stat-icon"><i class="bi {{ stat.icon }}"></i></div>
+            <div>
+                <div class="stat-value">{{ stat.count }}</div>
+                <div class="stat-label">{{ stat.label }}</div>
+            </div>
+        </a>
+    {% endfor %}
+
+    <a class="stat-card highlight" href="{% url 'dashboard:analytics' %}">
+        <div class="stat-icon"><i class="bi bi-bar-chart-line"></i></div>
+        <div>
+            <div class="stat-value">{{ today_visitors }}</div>
+            <div class="stat-label">Today's Visitors</div>
+        </div>
+    </a>
+
+    <a class="stat-card highlight" href="{% url 'dashboard:module-list' 'contactmessage' %}">
+        <div class="stat-icon"><i class="bi bi-envelope-exclamation"></i></div>
+        <div>
+            <div class="stat-value">{{ new_messages_count }}</div>
+            <div class="stat-label">New Messages</div>
+        </div>
+    </a>
+
+    <a class="stat-card highlight" href="{% url 'dashboard:module-list' 'jobapplication' %}">
+        <div class="stat-icon"><i class="bi bi-person-plus"></i></div>
+        <div>
+            <div class="stat-value">{{ new_applications_count }}</div>
+            <div class="stat-label">New Applications</div>
+        </div>
+    </a>
+
+    <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-people"></i></div>
+        <div>
+            <div class="stat-value">{{ total_users }}</div>
+            <div class="stat-label">Users</div>
+        </div>
+    </div>
+</div>
+
+<div class="row-grid">
+    <div class="panel">
+        <div class="panel-header">
+            <h2>Recent Contact Messages</h2>
+            <a href="{% url 'dashboard:module-list' 'contactmessage' %}">View all</a>
+        </div>
+        {% if recent_messages %}
+            <ul class="simple-list">
+                {% for m in recent_messages %}
+                    <li>
+                        <div class="fw-semibold">{{ m.name }} <span class="badge-status badge-{{ m.status }}">{{ m.get_status_display }}</span></div>
+                        <div class="text-muted small">{{ m.subject|default:m.message|truncatechars:60 }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="empty-state">No messages yet.</p>
+        {% endif %}
+    </div>
+
+    <div class="panel">
+        <div class="panel-header">
+            <h2>Recent Products</h2>
+            <a href="{% url 'dashboard:module-list' 'product' %}">View all</a>
+        </div>
+        {% if recent_products %}
+            <ul class="simple-list">
+                {% for p in recent_products %}
+                    <li>
+                        <div class="fw-semibold">{{ p.name }}</div>
+                        <div class="text-muted small">{{ p.category.name|default:"Uncategorized" }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="empty-state">No products yet.</p>
+        {% endif %}
+    </div>
+
+    <div class="panel">
+        <div class="panel-header">
+            <h2>Recent Job Applications</h2>
+            <a href="{% url 'dashboard:module-list' 'jobapplication' %}">View all</a>
+        </div>
+        {% if recent_applications %}
+            <ul class="simple-list">
+                {% for a in recent_applications %}
+                    <li>
+                        <div class="fw-semibold">{{ a.first_name }} {{ a.last_name }}</div>
+                        <div class="text-muted small">{{ a.job.title|default:"General application" }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="empty-state">No applications yet.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

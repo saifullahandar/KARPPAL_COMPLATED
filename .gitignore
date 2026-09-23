@@ -1,0 +1,26 @@
+# Secrets and local state
+.env
+*.local
+db.sqlite3
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Django runtime output
+backend/media/*
+!backend/media/.gitkeep
+backend/staticfiles/
+backend/logs/
+*.log
+
+# Node
+node_modules/
+dist/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

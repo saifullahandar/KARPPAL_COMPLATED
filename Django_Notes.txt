@@ -1,0 +1,66 @@
+pwd -----------------> File location.
+
+DJANGO -> A Python Framework.
+Framework.
+Django is For backend of web apps.
+Connect to a database.
+Security.
+Data Logic.
+Authentication, Authorization.
+Django code is secure.
+Frontend code is open source.
+
+
+
+Frontend -------request-------backend
+API ---> black box
+
+Django Rest Framework
+JSON | XML
+
+JSON ------->
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+For Installing Django!
+    pip install django django-rest-framework.
+
+For making a project!
+    python -m django startproject --PROJECT_NAME--
+
+For running project
+    python manage.py runserver
+
+
+
+
+ORM ====> Object Renational Model
+
+Architecture: MVT --------> Model View Template
+
+Model: (DB)
+View: Handle Logic, Query, Response and Error
+Template: HTML Templator
+
+For making an app!
+    python manage.py startapp APP_NAME
+
+
+
+Migration:
+    For Save the changes.
+
+Migrate:
+    For Save the changes.
+    
+
+Admin: you have db tables
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+DRF -----------> Django Rest Framework:
+Json ( Exchange The Data ). ----> Model } } } }
+                                                } } Serializer
+Model ----> JSON ( Exchange The Data ). } } } } 

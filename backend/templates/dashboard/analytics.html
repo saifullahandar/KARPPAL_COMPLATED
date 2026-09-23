@@ -1,0 +1,95 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Website Analytics{% endblock %}
+{% block page_title %}Website Analytics{% endblock %}
+
+{% block content %}
+<div class="stat-grid">
+    <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-person-check"></i></div>
+        <div>
+            <div class="stat-value">{{ overview.today_visitors }}</div>
+            <div class="stat-label">Today's Visitors</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-person"></i></div>
+        <div>
+            <div class="stat-value">{{ overview.yesterday_visitors }}</div>
+            <div class="stat-label">Yesterday's Visitors</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-calendar-week"></i></div>
+        <div>
+            <div class="stat-value">{{ overview.last_7_days_visitors }}</div>
+            <div class="stat-label">Last 7 Days</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-calendar-month"></i></div>
+        <div>
+            <div class="stat-value">{{ overview.last_30_days_visitors }}</div>
+            <div class="stat-label">Last 30 Days</div>
+        </div>
+    </div>
+    <div class="stat-card highlight">
+        <div class="stat-icon"><i class="bi bi-people"></i></div>
+        <div>
+            <div class="stat-value">{{ overview.total_visitors }}</div>
+            <div class="stat-label">Total Visitors</div>
+        </div>
+    </div>
+    <div class="stat-card highlight">
+        <div class="stat-icon"><i class="bi bi-eye"></i></div>
+        <div>
+            <div class="stat-value">{{ overview.total_page_views }}</div>
+            <div class="stat-label">Total Page Views</div>
+        </div>
+    </div>
+</div>
+
+<div class="panel mt-4">
+    <div class="panel-header">
+        <h2>Website Visitors — Trend</h2>
+        <span class="text-muted small">{{ overview.today_page_views }} page view{{ overview.today_page_views|pluralize }} today</span>
+    </div>
+
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#trend-7" type="button" role="tab">Last 7 Days</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#trend-30" type="button" role="tab">Last 30 Days</button>
+        </li>
+    </ul>
+
+    <div class="tab-content pt-4">
+        <div class="tab-pane fade show active" id="trend-7" role="tabpanel">
+            <div class="chart-bars">
+                {% for row in trend_7 %}
+                    <div class="chart-bar" title="{{ row.date|date:'M j, Y' }} — {{ row.visitors }} visitor{{ row.visitors|pluralize }}, {{ row.page_views }} page view{{ row.page_views|pluralize }}">
+                        <span class="chart-bar-value">{{ row.visitors }}</span>
+                        <div class="chart-bar-fill" style="height: {% widthratio row.visitors chart_max 100 %}%"></div>
+                        <span class="chart-bar-label">{{ row.date|date:"M j" }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="tab-pane fade" id="trend-30" role="tabpanel">
+            <div class="chart-bars">
+                {% for row in trend_30 %}
+                    <div class="chart-bar" title="{{ row.date|date:'M j, Y' }} — {{ row.visitors }} visitor{{ row.visitors|pluralize }}, {{ row.page_views }} page view{{ row.page_views|pluralize }}">
+                        <div class="chart-bar-fill" style="height: {% widthratio row.visitors chart_max 100 %}%"></div>
+                        {% if forloop.counter0|divisibleby:5 %}
+                            <span class="chart-bar-label">{{ row.date|date:"M j" }}</span>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <p class="text-muted small mt-3 mb-0">
+        Hover a bar for the exact date and count. "Visitors" counts each unique browser once per day; "page views" counts every page load.
+    </p>
+</div>
+{% endblock %}

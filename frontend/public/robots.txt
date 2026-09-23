@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard/
+Disallow: /login
+
+# Uncomment and set the real production domain once this site is deployed —
+# see frontend/scripts/generate-sitemap.mjs for how sitemap.xml itself is produced.
+# Sitemap: https://<production-domain>/sitemap.xml

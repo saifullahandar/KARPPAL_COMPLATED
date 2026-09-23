@@ -1,0 +1,474 @@
+{
+    "email": "Connect us in E-Mail.",
+    "phone": "Connect us in Whats App.",
+
+    "nav.login": "Login",
+    "nav.call": "Contact",
+    "nav.jobchance": "Job Chance",
+    "nav.export": "Export",
+    "nav.research": "Research",
+    "nav.gallery": "Gallery",
+    "nav.controlquality": "Quality Control",
+    "nav.services": "Services",
+    "nav.products": "Products",
+    "nav.about": "About",
+    "nav.home": "Home",
+
+    "slider.ShowAllproduct": "Show All Products",
+    "slider.contactUs": "Contact us",
+    "slider.slideAlt": "Slide {{n}}",
+    "slider.goToSlide": "Go to slide {{n}}",
+    "slider.previousSlide": "Previous slide",
+    "slider.nextSlide": "Next slide",
+
+    "common.retry": "Try Again",
+    "common.loading": "Loading...",
+    "common.error": "Something went wrong. Please try again.",
+    "common.empty": "Nothing to show here yet.",
+
+    "header.selectLanguage": "Select language",
+    "header.languageFa": "دری",
+    "header.languagePs": "پښتو",
+    "header.languageEn": "English",
+    "header.menuToggle": "Toggle navigation menu",
+
+    "features.standardProduction.title": "Standard Production",
+    "features.standardProduction.text": "We have given the first place to advanced technologies for production",
+
+    "features.qualityControl.title": "Quality Control",
+    "features.qualityControl.text": "We conduct our tests in all parts of the process and production",
+
+    "features.naturalProducts.title": "Natural Products",
+    "features.naturalProducts.text": "We produce our products without adding any harmful substances or contaminants",
+
+    "features.fastDelivery.title": "Fast Delivery",
+    "features.fastDelivery.text": "We provide 24-hour support for all our services",
+
+    "features.globalExport.title": "Global Export",
+    "features.globalExport.text": "We offer our export services worldwide",
+
+    "features.support.title": "24/7 Support",
+    "features.support.text": "Our team is available 24 hours a day, 7 days a week",
+
+    "ourProduct.firstTitle": "Best Choice",
+    "ourProduct.secondTitle": "Our Products",
+    "ourproduct.milk": "Milk",
+    "ourproduct.musk": "Musk",
+    "ourproduct.yogurt": "Yogurt",
+    "ourproduct.drip": "Drip",
+    "ourproduct.cheese": "Cheese",
+    "ourproduct.all.button": "See More",
+
+    "lacience.ourAchevment": "Our Achievement",
+
+    "lacience.numberOfExprience": "15+",
+    "lacience.exprience": "Year Exprience",
+
+    "lacience.numberOfProducts": "25+",
+    "lacience.products": "Type Of Production",
+
+    "lacience.numberOfcapacity": "2.000+",
+    "lacience.capacityOfProduction": "Capacity Of Production (Ton)",
+
+    "lacience.numberOfEmployee": "200+",
+    "lacience.specialistEmployee": "Specialist Employee",
+
+    "lacience.numberOfCountry": "15+",
+    "lacience.CountryForExpertation": "Countries For Exportation",
+
+    "lacience.numberOfCustomers": "5.000+",
+    "lacience.happyCustomers": "Satisfied Employees",
+
+    "footer": {
+        "contact": "Contact",
+        "address": "Afghanistan, Kabul, Industrial Parks",
+        "services": "Services",
+        "service1": "Agricultural Products Processing",
+        "service2": "Packaging and Processing",
+        "service3": "Food Products Production",
+        "service4": "Consulting Services",
+        "quickAccess": "Quick Access",
+        "home": "Home",
+        "about": "About Us",
+        "servicesLink": "Services",
+        "products": "Products",
+        "company": "Karppal",
+        "companyDescription": "Agricultural and Animal Products Processing Company",
+        "description": "In Afghanistan, we work in agriculture, horticulture, and food products to improve quality and promote sustainable production.",
+        "mapAlt": "Map",
+        "copyright": "All rights reserved by Karppal Agricultural Company",
+        "siteMap": "Sitemap",
+        "terms": "Terms and Conditions",
+        "privacy": "Privacy Policy"
+    },
+
+    "about": {
+        "badge": "About Us",
+        "title": "About Karppal Company",
+        "description": "Karppal Company operates with the goal of providing reliable, high-quality, and valuable services to its customers across various economic and social fields. We believe in collaboration, innovation, and customer satisfaction.",
+        "missionTitle": "Our Mission",
+        "missionText": "Our mission is to use modern technologies and a professional team to provide effective and sustainable solutions for our customers and contribute to the growth and development of society.",
+        "visionTitle": "Our Vision",
+        "visionText": "We believe that trust, transparency, and commitment are the most important values of successful cooperation. Therefore, we always strive to provide our services according to high standards and the real needs of our customers."
+    },
+
+    "products": {
+        "store": "KARPPAL STORE",
+        "title": "Our Products",
+        "description": "A selection of quality products for your home, office, and business at competitive prices.",
+        "quickOrder": "Quick Order",
+
+        "stats": {
+            "products": "Number of Products",
+            "customers": "Customer Satisfaction",
+            "delivery": "Fast Delivery",
+            "productCount": "+120",
+            "customerRate": "98%",
+            "deliveryTime": "24 Hours"
+        },
+
+        "items": {
+            "milk": {
+                "title": "Office Supplies Kit",
+                "description": "A complete collection of high-quality office supplies for offices and workspaces.",
+                "price": "450.00 AFN",
+                "tag1": "Office",
+                "tag2": "Popular",
+                "alt": "Office Supplies Kit"
+            },
+            "laptop": {
+                "title": "Advanced Laptop",
+                "description": "A fast and lightweight laptop suitable for work, study, and everyday use at home or in the office.",
+                "price": "18,500.00 AFN",
+                "tag1": "Electronics",
+                "tag2": "New",
+                "alt": "Advanced Laptop"
+            },
+            "desk": {
+                "title": "Office Desk",
+                "description": "A modern and durable desk designed for comfortable and professional work environments.",
+                "price": "7,800.00 AFN",
+                "tag1": "Furniture",
+                "tag2": "Special Offer",
+                "alt": "Office Desk"
+            },
+            "bag": {
+                "title": "Transport Bag",
+                "description": "A high-quality and stylish bag for safely carrying personal and office belongings.",
+                "price": "2,200.00 AFN",
+                "tag1": "Packaging",
+                "tag2": "Hot",
+                "alt": "Transport Bag"
+            }
+        },
+
+        "buy": "Buy",
+        "viewAll": "View All Products",
+        "loading": "Loading products...",
+        "empty": "No products available yet.",
+        "error": "Unable to load products. Please try again later."
+    },
+
+    "services": {
+        "badge": "Our Services",
+        "title": "Professional Solutions for Your Business Growth",
+        "description": "At Karppal, we provide services that support businesses on their journey toward growth, digital transformation, and a better customer experience.",
+
+        "items": {
+            "business": {
+                "title": "Business Consulting",
+                "description": "Analyzing your needs, identifying opportunities, and designing suitable strategies for long-term growth and success."
+            },
+            "web": {
+                "title": "Web Design & Development",
+                "description": "Building modern websites and platforms with excellent user experience, high performance, and professional design."
+            },
+            "app": {
+                "title": "Application Development",
+                "description": "Designing mobile and web applications to provide better services, increase customer engagement, and grow sales."
+            },
+            "marketing": {
+                "title": "Digital Marketing",
+                "description": "Implementing digital marketing strategies, targeted advertising, and campaign optimization to attract more customers."
+            },
+            "support": {
+                "title": "Technical Support",
+                "description": "Continuous support, system updates, and technical problem solving to keep your business running smoothly."
+            },
+            "ai": {
+                "title": "AI & Automation",
+                "description": "Using intelligent tools to automate processes, increase productivity, and reduce operational costs."
+            }
+        },
+
+        "cta": {
+            "title": "Ready to Start a New Project?",
+            "description": "Get in touch with our team so we can discuss your needs, goals, and the best solutions for your business.",
+            "button": "Contact Us"
+        },
+        "loading": "Loading services...",
+        "empty": "No services published yet.",
+        "error": "Unable to load services. Please try again later."
+    },
+
+
+    "contact": {
+        "hero": {
+            "badge": "Contact Us",
+            "title": "Get in Touch With Us",
+            "description": "If you have any questions or need more information, the Karppal team is ready to answer your questions and work with you."
+        },
+
+        "info": {
+            "title": "Contact Information",
+            "description": "You can contact us through any of the methods below. We will respond to your message as soon as possible.",
+
+            "address": {
+                "title": "Address",
+                "text": "Afghanistan, Kabul, Industrial Parks"
+            },
+
+            "email": {
+                "title": "Email"
+            },
+
+            "phone": {
+                "title": "Phone Number"
+            },
+
+            "social": "Follow Us"
+        },
+
+        "form": {
+            "badge": "Send a Message",
+            "title": "Send Your Message to Us",
+            "description": "Fill out the form below and our team will contact you.",
+
+            "name": "Your Name",
+            "namePlaceholder": "Enter your name",
+
+            "phone": "Phone Number",
+            "phonePlaceholder": "Enter your phone number",
+
+            "email": "Email",
+            "emailPlaceholder": "example@email.com",
+
+            "subject": "Subject",
+            "subjectPlaceholder": "Message subject",
+
+            "message": "Message",
+            "messagePlaceholder": "Write your message...",
+
+            "submit": "Send Message",
+            "sending": "Sending...",
+            "successMessage": "Your message has been sent. We will get back to you soon.",
+            "errorGeneric": "Could not send your message. Please provide an email or phone number and try again."
+        },
+
+        "map": {
+            "alt": "Karppal company location",
+            "button": "View Location on Map"
+        }
+    },
+
+    "research": {
+        "eyebrow": "Karpaal",
+        "title": "Research & Publications",
+        "subtitle": "Explore the latest research, findings, and developments from our team.",
+        "loading": "Loading research...",
+        "empty": "No research articles available yet.",
+        "error": "Unable to load research. Please try again later.",
+        "featuredBadge": "Featured Research",
+        "categoryFallback": "Research",
+        "readMore": "Read More",
+        "backToList": "Back to Research",
+        "byAuthor": "By {{author}}",
+        "notFound": "This research article was not found."
+    },
+
+    "gallery": {
+        "eyebrow": "Karpaal Gallery",
+        "title": "See our production and activities at a glance",
+        "loading": "Loading gallery...",
+        "empty": "No images available.",
+        "error": "Unable to load the gallery. Please try again later."
+    },
+
+    "jobs": {
+        "title": "Career Opportunities",
+        "applyButton": "Apply for a Job",
+        "cards": {
+            "freshTitle": "Fresh Opportunities",
+            "freshText": "Our job listings are updated continuously to match the current job market.",
+            "nationalTitle": "National & International",
+            "nationalText": "Opportunities are available across departments, from local to international roles.",
+            "growthTitle": "Personal Growth",
+            "growthText": "Courses, training, and growth opportunities are available for staff and candidates."
+        },
+        "recentTitle": "Recent Opportunities",
+        "postingsCount": "{{count}} postings",
+        "loading": "Loading opportunities...",
+        "empty": "No job openings are currently available.",
+        "error": "Unable to load job opportunities. Please try again later.",
+        "activeBadge": "Active",
+        "applyForPosition": "Apply for this position ←",
+        "sidebar": {
+            "activeOpportunities": "Active Opportunities",
+            "activeOpportunitiesDesc": "Number of job openings currently available.",
+            "guideTitle": "Guide",
+            "guideResume": "Prepare your resume",
+            "guideExplore": "Explore the opportunities",
+            "guideGrow": "Grow your skills for the job market"
+        },
+        "employmentTypes": {
+            "fullTime": "Full Time",
+            "partTime": "Part Time",
+            "remote": "Remote",
+            "contract": "Contract"
+        }
+    },
+
+    "jobApplication": {
+        "eyebrow": "Karpaal",
+        "title": "Job Application Form",
+        "successMessage": "Your application was submitted successfully. Our team will contact you soon.",
+        "errorMessage": "Submitting the application failed. Please try again.",
+        "sectionTitle": "General Information",
+        "sectionBadge": "Application Details",
+        "firstName": "First Name:",
+        "firstNamePlaceholder": "Enter your first name",
+        "applicationDate": "Application Date:",
+        "lastName": "Last Name:",
+        "lastNamePlaceholder": "Enter your last name",
+        "country": "Your Country:",
+        "countryPlaceholder": "Afghanistan",
+        "phone": "Phone Number:",
+        "phonePlaceholder": "0780 194 632",
+        "gender": "Gender",
+        "genderSelect": "Select",
+        "genderMale": "Male",
+        "genderFemale": "Female",
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Additional details about yourself",
+        "cancel": "Cancel",
+        "submit": "Submit Application",
+        "submitting": "Submitting..."
+    },
+
+    "all": {
+        "eyebrow": "Karppal Collection",
+        "title": "All Products",
+        "searchPlaceholder": "Search products...",
+        "loading": "Loading products...",
+        "empty": "No products found.",
+        "error": "Unable to load products. Please try again later.",
+        "categoryLabel": "Category",
+        "orderButton": "Order",
+        "previous": "Previous",
+        "next": "Next",
+        "pageOf": "Page {{page}} of {{totalPages}}"
+    },
+
+    "exportPage": {
+        "eyebrow": "Karpaal",
+        "title": "Export Page",
+        "exportReportButton": "Export Report",
+        "liveMonitoring": "Live Monitoring",
+        "liveBadge": "LIVE",
+        "monitoringTitle": "Export Monitoring",
+        "activeBadge": "Active",
+        "stats": {
+            "totalExports": "Total Exports",
+            "totalExportsGrowth": "+12.4% vs last month",
+            "completedOrders": "Completed Orders",
+            "completedOrdersGrowth": "+8.2% growth",
+            "pending": "Pending",
+            "pendingNote": "14 items need review"
+        },
+        "recentListTitle": "Recent Exports",
+        "viewAll": "View All",
+        "table": {
+            "invoice": "Invoice No.",
+            "country": "Country",
+            "amount": "Amount",
+            "status": "Status"
+        },
+        "countries": {
+            "uae": "United Arab Emirates",
+            "germany": "Germany",
+            "canada": "Canada"
+        },
+        "statuses": {
+            "completed": "Completed",
+            "shipping": "Shipping",
+            "pending": "Pending"
+        },
+        "summaryTitle": "Performance Summary",
+        "thisMonth": "This Month",
+        "summary": {
+            "shipped": "Shipments Sent",
+            "onTime": "On-Time Delivery",
+            "satisfaction": "Customer Satisfaction"
+        },
+        "recentNotes": "Recent Notes",
+        "internationalShipping": "International Shipping",
+        "internationalShippingText": "Export trends this month have grown significantly, with deliveries to target markets continuing to rise steadily.",
+        "moreDetails": "More Details"
+    },
+
+    "controlQuality": {
+        "title": "Quality Control System",
+        "projectLabel": "Project",
+        "stats": {
+            "samples": "Number of Samples",
+            "today": "Today",
+            "acceptanceRate": "Acceptance Rate",
+            "inReview": "In Review",
+            "activeBadge": "Active",
+            "inReviewNote": "Must be reviewed within the next 2 hours",
+            "issues": "Reported Issues",
+            "criticalBadge": "Critical",
+            "issuesNote": "3 items need urgent follow-up"
+        },
+        "reviewEyebrow": "Quality Review",
+        "dailyReportTitle": "Daily Report",
+        "newResultButton": "Record New Result",
+        "checks": {
+            "colorCoating": "Color & Coating Check",
+            "dimensions": "Dimension Control",
+            "performance": "Performance Test"
+        },
+        "todayStatus": "Today's Status",
+        "shortReport": "Short Report",
+        "approvedSamples": "Approved Samples",
+        "rejectedSamples": "Rejected Samples",
+        "avgReviewTime": "Average Review Time",
+        "topSectionsEyebrow": "Most Active Sections",
+        "reportsTitle": "Quality Control Reports",
+        "showAll": "Show All",
+        "sections": {
+            "production": "Production",
+            "packaging": "Packaging",
+            "assembly": "Assembly",
+            "delivery": "Delivery"
+        }
+    },
+
+    "login": {
+        "title": "Sign In",
+        "subtitle": "Please enter your account details.",
+        "invalidCredentials": "Incorrect email or password.",
+        "emailLabel": "Username or Email",
+        "emailPlaceholder": "example@karpal.com",
+        "passwordLabel": "Password",
+        "passwordPlaceholder": "Enter your password",
+        "showPassword": "Show password",
+        "hidePassword": "Hide password",
+        "rememberMe": "Remember me",
+        "forgotPassword": "Forgot password?",
+        "submitting": "Signing in...",
+        "submit": "Sign In",
+        "noAccount": "Don't have an account?",
+        "signUp": "Sign up"
+    }
+}

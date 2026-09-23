@@ -1,0 +1,34 @@
+from django.core.files.uploadedfile import SimpleUploadedFile
+from django.urls import reverse
+from rest_framework import status
+from rest_framework.test import APITestCase
+
+from .models import NewsArticle
+
+
+TINY_GIF = (
+    b"GIF87a\x01\x00\x01\x00\x80\x00\x00\x00\x00\x00\x00\x00\x00,"
+    b"\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;"
+)
+
+
+def tiny_image():
+    return SimpleUploadedFile("test.gif", TINY_GIF, content_type="image/gif")
+
+
+class NewsAPITests(APITestCase):
+    def test_only_published_articles_are_public(self):
+        NewsArticle.objects.create(title="Published", content="...", featured_image=tiny_image(), published=True)
+        NewsArticle.objects.create(title="Draft", content="...", featured_image=tiny_image(), published=False)
+
+        response = self.client.get(reverse("news:news-article-list"))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        titles = [a["title"] for a in response.data["results"]]
+        self.assertIn("Published", titles)
+        self.assertNotIn("Draft", titles)
+
+    def test_slug_is_generated_and_unique(self):
+        a1 = NewsArticle.objects.create(title="Karppal News", content="...", featured_image=tiny_image())
+        a2 = NewsArticle.objects.create(title="Karppal News", content="...", featured_image=tiny_image())
+        self.assertEqual(a1.slug, "karppal-news")
+        self.assertNotEqual(a1.slug, a2.slug)

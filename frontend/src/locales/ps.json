@@ -1,0 +1,478 @@
+{
+    "email": "له موږ سره د ایمیل له لاری وصل شی.",
+    "phone": "له موږ سره د واټساپ له لاری وصل شی.",
+
+    "nav.login": "ننوتل",
+    "nav.call": "له موږ سره اړیکی",
+    "nav.jobchance": "د دندی فرصتونه",
+    "nav.export": "صادرات",
+    "nav.research": "څېړنې",
+    "nav.gallery": "آلبوم",
+    "nav.controlquality": "د کیفیت کنترول",
+    "nav.services": "زموږ خدمتونه",
+    "nav.products": "زموږ محصولات",
+    "nav.about": "زموږ په اړه",
+    "nav.home": "اصلی صفحه",
+
+    "slider.ShowAllproduct": "د ټولو محصولاتو لیدنه",
+    "slider.contactUs": "له موږ سره اړیکی",
+    "slider.slideAlt": "سلاید {{n}}",
+    "slider.goToSlide": "دې سلاید ته لاړ شئ {{n}}",
+    "slider.previousSlide": "پخوانی سلاید",
+    "slider.nextSlide": "بل سلاید",
+
+    "common.retry": "بیا هڅه وکړئ",
+    "common.loading": "بارېږي...",
+    "common.error": "یوه ستونزه رامنځته شوه. مهرباني وکړئ بیا هڅه وکړئ.",
+    "common.empty": "د ښودلو لپاره هېڅ شی شتون نلري.",
+
+    "header.selectLanguage": "ژبه غوره کړئ",
+    "header.languageFa": "دری",
+    "header.languagePs": "پښتو",
+    "header.languageEn": "English",
+    "header.menuToggle": "د مینو ښودل/پټول",
+
+    "features.standardProduction.title": "استاندرد تولید",
+    "features.standardProduction.text": "موږ د تولید لپاره پیشرفته تکنالوژی ته اول مقام ور کړی",
+
+    "features.qualityControl.title": "د کیفیت کنترول",
+    "features.qualityControl.text": "موږ د پروسس او تولید په هره مرحله کی څیړنی کوو",
+
+    "features.naturalProducts.title": "طبیعی محصولات",
+    "features.naturalProducts.text": "موږ پرته له اضافی او ناپاک مودو څخه خپل تولید کوو",
+
+    "features.fastDelivery.title": "ژر لیږل",
+    "features.fastDelivery.text": "موږ له ټولو خدماتو سره په ۲۴ ساعته توګه ستاسو په خدمت کی یو",
+
+    "features.globalExport.title": "جهانی صادرات",
+    "features.globalExport.text": "موږ خپل د صادر کولو خدمات د نړۍ په ټولو هیوادونو کی وړاندی کوو",
+
+    "features.support.title": "پشتبانی/۲۴ ساعته",
+    "features.support.text": "زموږ همکاران ۲۴ ساعته ستاسو په خد مت کی دي",
+
+    "ourProduct.firstTitle": "غوره انتخاب",
+    "ourProduct.secondTitle": "زموږ محصولات",
+    "ourproduct.milk": "شیدې",
+    "ourproduct.musk": "چکه",
+    "ourproduct.yogurt": "مستې",
+    "ourproduct.drip": "کوچ",
+    "ourproduct.cheese": "پنیر",
+    "ourproduct.all.button": "د ډیرو کتل",
+
+    "lacience.ourAchevment": "زموږ لاسته را وړني",
+
+    "lacience.numberOfExprience": "۱۵+",
+    "lacience.exprience": "کاله تجربه",
+
+    "lacience.numberOfProducts": "۲۵+",
+    "lacience.products": "ډول محصول",
+
+    "lacience.numberOfcapacity": "۲٬۰۰۰+",
+    "lacience.capacityOfProduction": "په یو کال کي (تن)",
+
+    "lacience.numberOfEmployee": "۲۰۰+",
+    "lacience.specialistEmployee": "متخصص کارمندان",
+
+    "lacience.numberOfCountry": "۱۵+",
+    "lacience.CountryForExpertation": "د صادر کولو هیوادونه",
+
+    "lacience.numberOfCustomers": "۵٬۰۰۰+",
+    "lacience.happyCustomers": "خوښ پیریدونکي",
+
+    "footer": {
+        "contact": "اړیکه",
+        "address": "افغانستان، کابل، صنعتي پارکونه",
+        "services": "خدمتونه",
+        "service1": "د کرنیزو محصولاتو پروسس",
+        "service2": "بسته‌بندي او پروسس",
+        "service3": "د خوراکي محصولاتو تولید",
+        "service4": "مشورتي خدمتونه",
+        "quickAccess": "چټک لاسرسی",
+        "home": "اصلي پاڼه",
+        "about": "زموږ په اړه",
+        "servicesLink": "خدمتونه",
+        "products": "محصولات",
+        "company": "کارپال",
+        "companyDescription": "د کرنیزو او حیواني محصولاتو د پروسس شرکت",
+        "description": "په افغانستان کې د کرنې، باغدارۍ او خوراکي محصولاتو په برخه کې، د کیفیت لوړولو او دوامدار تولید لپاره له موږ سره همکاري وکړئ.",
+        "mapAlt": "نقشه",
+        "copyright": "د کارپال زراعتي شرکت ټول حقوق خوندي دي",
+        "siteMap": "د سایټ نقشه",
+        "terms": "شرایط او قوانین",
+        "privacy": "د محرمیت تګلاره"
+    },
+
+    "about": {
+        "badge": "زموږ په اړه",
+        "title": "د کارپال شرکت په اړه",
+        "description": "کارپال شرکت خپلو مشتریانو ته په بېلابېلو اقتصادي او ټولنیزو برخو کې د باوري، باکیفیته او ګټورو خدمتونو د وړاندې کولو په موخه فعالیت کوي. موږ په همکارۍ، نوښت او د مشتریانو رضایت باور لرو.",
+        "missionTitle": "زموږ ماموریت",
+        "missionText": "زموږ ماموریت دا دی چې د عصري ټکنالوژۍ او مسلکي ټیم په کارولو سره خپلو مشتریانو ته اغېزمن او دوامدار حلونه وړاندې کړو او د ټولنې د ودې او پرمختګ لپاره مرسته وکړو.",
+        "visionTitle": "زموږ لیدلوری",
+        "visionText": "موږ باور لرو چې باور، روڼتیا او ژمنتیا د بریالۍ همکارۍ تر ټولو مهم ارزښتونه دي. له همدې امله، تل هڅه کوو چې خپل خدمات د لوړو معیارونو او د مشتریانو د واقعي اړتیاوو مطابق وړاندې کړو."
+    },
+
+
+    "products": {
+        "store": "KARPPAL STORE",
+        "title": "زموږ محصولات",
+        "description": "ستاسو د کور، دفتر او سوداګرۍ لپاره د لوړ کیفیت او مناسب قیمت غوره محصولات.",
+        "quickOrder": "چټک امر",
+
+        "stats": {
+            "products": "د محصولاتو شمېر",
+            "customers": "د مشتریانو رضایت",
+            "delivery": "چټک تحویل",
+            "productCount": "+۱۲۰",
+            "customerRate": "۹۸٪",
+            "deliveryTime": "۲۴ ساعته"
+        },
+
+        "items": {
+            "milk": {
+                "title": "دفتري وسایلو کټ",
+                "description": "د دفتر او کاري ځایونو لپاره د لوړ کیفیت دفتري وسایلو بشپړه مجموعه.",
+                "price": "۴۵۰.۰۰ افغانۍ",
+                "tag1": "دفتري",
+                "tag2": "مشهور",
+                "alt": "دفتري وسایلو کټ"
+            },
+            "laptop": {
+                "title": "پرمختللی لپ‌ټاپ",
+                "description": "چټک او سپک لپ‌ټاپ چې د کار، زده‌کړې او ورځني استعمال لپاره مناسب دی.",
+                "price": "۱۸,۵۰۰.۰۰ افغانۍ",
+                "tag1": "برېښنایي",
+                "tag2": "نوی",
+                "alt": "پرمختللی لپ‌ټاپ"
+            },
+            "desk": {
+                "title": "دفتري مېز",
+                "description": "د عصري ډیزاین او لوړ دوام لرونکی مېز چې د مسلکي کاري چاپېریال لپاره مناسب دی.",
+                "price": "۷,۸۰۰.۰۰ افغانۍ",
+                "tag1": "فرنیچر",
+                "tag2": "ځانګړی وړاندیز",
+                "alt": "دفتري مېز"
+            },
+            "bag": {
+                "title": "د انتقال کڅوړه",
+                "description": "د شخصي او دفتري وسایلو د خوندي انتقال لپاره د لوړ کیفیت او ښکلي ډیزاین کڅوړه.",
+                "price": "۲,۲۰۰.۰۰ افغانۍ",
+                "tag1": "بسته‌بندي",
+                "tag2": "مشهور",
+                "alt": "د انتقال کڅوړه"
+            }
+        },
+
+        "buy": "پېرودل",
+        "viewAll": "ټول محصولات وګورئ",
+        "loading": "محصولات بارېږي...",
+        "empty": "تر اوسه هېڅ محصول نشر شوی نه دی.",
+        "error": "د محصولاتو بارول ونشول. مهرباني وکړئ وروسته بیا هڅه وکړئ."
+    },
+
+
+
+    "services": {
+        "badge": "زموږ خدمتونه",
+        "title": "ستاسو د سوداګرۍ د ودې لپاره مسلکي حل‌لارې",
+        "description": "په کارپال کې موږ داسې خدمتونه وړاندې کوو چې له سوداګرۍ سره د ودې، ډیجیټل بدلون او د مشتریانو د غوره تجربې په برخه کې مرسته کوي.",
+
+        "items": {
+            "business": {
+                "title": "د سوداګرۍ مشوره",
+                "description": "ستاسو د اړتیاوو تحلیل، د فرصتونو پېژندنه او د اوږدمهاله ودې او بریا لپاره د مناسبو ستراتیژیو جوړول."
+            },
+            "web": {
+                "title": "د ویب ډیزاین او پراختیا",
+                "description": "د غوره کاروونکي تجربې، لوړ سرعت او مسلکي ډیزاین سره د عصري ویب‌پاڼو او پلاتفورمونو جوړول."
+            },
+            "app": {
+                "title": "د اپلیکیشن پراختیا",
+                "description": "د موبایل او ویب اپلیکیشنونو ډیزاین او پراختیا، څو غوره خدمتونه، د مشتریانو زیات تعامل او د پلور وده رامنځته شي."
+            },
+            "marketing": {
+                "title": "ډیجیټل بازارموندنه",
+                "description": "د ډیجیټل بازارموندنې ستراتیژۍ، هدفمند اعلانونه او د کمپاینونو اصلاح کول، څو نور مشتریان جذب شي."
+            },
+            "support": {
+                "title": "تخنیکي ملاتړ",
+                "description": "دوامداره ملاتړ، د سیسټمونو تازه کول او د تخنیکي ستونزو حل کول، څو ستاسو سوداګري په ښه ډول پرمخ ولاړه شي."
+            },
+            "ai": {
+                "title": "مصنوعي ځیرکتیا او اتومات‌کول",
+                "description": "د هوښیار وسیلو کارول د پروسو د اتومات کولو، د تولید زیاتولو او د عملیاتي لګښتونو د کمولو لپاره."
+            }
+        },
+
+        "cta": {
+            "title": "ایا د یوې نوې پروژې پیل ته چمتو یاست؟",
+            "description": "زموږ له ټیم سره اړیکه ونیسئ، څو ستاسو اړتیاوې، موخې او ستاسو د سوداګرۍ لپاره غوره حل‌لارې وڅېړو.",
+            "button": "له موږ سره اړیکه"
+        },
+        "loading": "خدمتونه بارېږي...",
+        "empty": "تر اوسه هېڅ خدمت نشر شوی نه دی.",
+        "error": "د خدمتونو بارول ونشول. مهرباني وکړئ وروسته بیا هڅه وکړئ."
+    },
+
+
+
+    "contact": {
+        "hero": {
+            "badge": "له موږ سره اړیکه",
+            "title": "له موږ سره په اړیکه کې شئ",
+            "description": "که تاسو کومه پوښتنه لرئ یا نورو معلوماتو ته اړتیا لرئ، د کارپال ټیم ستاسو د ځواب او همکارۍ لپاره چمتو دی."
+        },
+
+        "info": {
+            "title": "د اړیکې معلومات",
+            "description": "د اړیکې لپاره تاسو کولی شئ له لاندې لارو څخه یوه وکاروئ. موږ به په لنډ وخت کې ستاسو پیغام ته ځواب ووایو.",
+
+            "address": {
+                "title": "پته",
+                "text": "افغانستان، کابل، صنعتي پارکونه"
+            },
+
+            "email": {
+                "title": "برېښنالیک"
+            },
+
+            "phone": {
+                "title": "د اړیکې شمېره"
+            },
+
+            "social": "موږ تعقیب کړئ"
+        },
+
+        "form": {
+            "badge": "پیغام واستوئ",
+            "title": "خپل پیغام موږ ته واستوئ",
+            "description": "لاندې فورمه ډکه کړئ، زموږ ټیم به له تاسو سره اړیکه ونیسي.",
+
+            "name": "ستاسو نوم",
+            "namePlaceholder": "خپل نوم ولیکئ",
+
+            "phone": "د اړیکې شمېره",
+            "phonePlaceholder": "د اړیکې شمېره",
+
+            "email": "برېښنالیک",
+            "emailPlaceholder": "example@email.com",
+
+            "subject": "موضوع",
+            "subjectPlaceholder": "د پیغام موضوع",
+
+            "message": "پیغام",
+            "messagePlaceholder": "خپل پیغام ولیکئ...",
+
+            "submit": "پیغام واستوئ",
+            "sending": "لیږل کیږي...",
+            "successMessage": "ستاسو پیغام ولیږل شو. موږ به ډېر ژر له تاسو سره اړیکه ونیسو.",
+            "errorGeneric": "ستاسو پیغام ونشو لیږل کیدی. مهرباني وکړئ بریښنالیک یا د اړیکې شمېره ولیکئ او بیا هڅه وکړئ."
+        },
+
+        "map": {
+            "alt": "د کارپال شرکت موقعیت",
+            "button": "په نقشه کې موقعیت وګورئ"
+        }
+    },
+
+    "research": {
+        "eyebrow": "کارپال",
+        "title": "څېړنې او خپرونې",
+        "subtitle": "زموږ د ټیم وروستي څېړنې، موندنې او پرمختګونه وڅارئ.",
+        "loading": "د څېړنو په بارولو کې دی...",
+        "empty": "لا تر اوسه هېڅ څېړنه شتون نلري.",
+        "error": "د څېړنو بارول ونشول. مهرباني وکړئ وروسته بیا هڅه وکړئ.",
+        "featuredBadge": "ځانګړې څېړنه",
+        "categoryFallback": "څېړنې",
+        "readMore": "نور یې ولولئ",
+        "backToList": "بېرته څېړنو ته",
+        "byAuthor": "لیکوال: {{author}}",
+        "notFound": "دا څېړنه ونه موندل شوه."
+    },
+
+    "gallery": {
+        "eyebrow": "د کارپال ګالري",
+        "title": "زموږ تولیدات او فعالیتونه په یو نظر کې وګورئ",
+        "loading": "ګالري بارېږي...",
+        "empty": "هېڅ انځور شتون نلري.",
+        "error": "د ګالرۍ بارول ونشول. مهرباني وکړئ وروسته بیا هڅه وکړئ."
+    },
+
+    "jobs": {
+        "title": "د دندې فرصتونه",
+        "applyButton": "د دندې غوښتنه",
+        "cards": {
+            "freshTitle": "نوي فرصتونه",
+            "freshText": "د دندو لیست په دوامداره توګه تازه کیږي او د اوسني کار بازار سره سمون لري.",
+            "nationalTitle": "ملي او نړیوال",
+            "nationalText": "فرصتونه په بېلابېلو برخو کې، له سیمه‌ییزو تر نړیوالو کچو پورې شتون لري.",
+            "growthTitle": "شخصي وده",
+            "growthText": "د کارکوونکو او نوماندانو لپاره، کورسونه، روزنې او د ودې فرصتونه شتون لري."
+        },
+        "recentTitle": "وروستي فرصتونه",
+        "postingsCount": "{{count}} اعلانونه",
+        "loading": "فرصتونه بارېږي...",
+        "empty": "دا مهال هېڅ دنده شتون نلري.",
+        "error": "د دندو فرصتونه ونشول بارېدلی. مهرباني وکړئ وروسته بیا هڅه وکړئ.",
+        "activeBadge": "فعاله",
+        "applyForPosition": "د دې دندې لپاره غوښتنه ←",
+        "sidebar": {
+            "activeOpportunities": "فعالې فرصتونه",
+            "activeOpportunitiesDesc": "د اوس مهال شتون لرونکو دندو شمېر.",
+            "guideTitle": "لارښود",
+            "guideResume": "د خپل CV چمتووالی",
+            "guideExplore": "د فرصتونو پېژندنه",
+            "guideGrow": "په کار بازار کې د مهارتونو وده"
+        },
+        "employmentTypes": {
+            "fullTime": "بشپړ وخت",
+            "partTime": "نیم وخت",
+            "remote": "لیرې کار",
+            "contract": "قراردادي"
+        }
+    },
+
+    "jobApplication": {
+        "eyebrow": "کارپال",
+        "title": "د دندې غوښتنليک فورمه",
+        "successMessage": "ستاسو غوښتنليک په بریالیتوب سره ثبت شو. زموږ ټیم به ډېر ژر له تاسو سره اړیکه ونیسي.",
+        "errorMessage": "د غوښتنليک ثبتول ونشول. مهرباني وکړئ بیا هڅه وکړئ.",
+        "sectionTitle": "عمومي معلومات",
+        "sectionBadge": "د غوښتنليک جزئیات",
+        "firstName": "نوم:",
+        "firstNamePlaceholder": "خپل نوم ولیکئ",
+        "applicationDate": "د غوښتنليک نېټه:",
+        "lastName": "تخلص:",
+        "lastNamePlaceholder": "خپل تخلص ولیکئ",
+        "country": "ستاسو هېواد:",
+        "countryPlaceholder": "افغانستان",
+        "phone": "د اړیکې شمېره:",
+        "phonePlaceholder": "۰۷۸۰ ۱۹۴ ۶۳۲",
+        "gender": "جنسیت",
+        "genderSelect": "غوره کړئ",
+        "genderMale": "نارینه",
+        "genderFemale": "ښځینه",
+        "descriptionLabel": "تشریحات",
+        "descriptionPlaceholder": "ستاسو په اړه اضافي تشریحات",
+        "cancel": "لغوه کول",
+        "submit": "غوښتنليک ثبت کړئ",
+        "submitting": "لیږل کیږي..."
+    },
+
+    "all": {
+        "eyebrow": "د کارپال ټولګه",
+        "title": "ټول محصولات",
+        "searchPlaceholder": "د محصول لټون...",
+        "loading": "محصولات بارېږي...",
+        "empty": "هېڅ محصول ونه موندل شو.",
+        "error": "د محصولاتو بارول ونشول. مهرباني وکړئ وروسته بیا هڅه وکړئ.",
+        "categoryLabel": "کټګورۍ",
+        "orderButton": "امر",
+        "previous": "پخوانی",
+        "next": "بل",
+        "pageOf": "پاڼه {{page}} د {{totalPages}} نه"
+    },
+
+    "exportPage": {
+        "eyebrow": "کارپال",
+        "title": "د صادراتو پاڼه",
+        "exportReportButton": "راپور صادر کړئ",
+        "liveMonitoring": "سمدستي څارنه",
+        "liveBadge": "سمدستي",
+        "monitoringTitle": "د صادراتو څارنه",
+        "activeBadge": "فعاله",
+        "stats": {
+            "totalExports": "ټول صادرات",
+            "totalExportsGrowth": "+۱۲.۴٪ د تېر میاشتې په پرتله",
+            "completedOrders": "بشپړ شوي امرونه",
+            "completedOrdersGrowth": "+۸.۲٪ وده",
+            "pending": "په تمه",
+            "pendingNote": "۱۴ ټکي بیاکتنې ته اړتیا لري"
+        },
+        "recentListTitle": "د وروستیو صادراتو لیست",
+        "viewAll": "ټول وګورئ",
+        "table": {
+            "invoice": "د بل شمېره",
+            "country": "هېواد",
+            "amount": "اندازه",
+            "status": "حالت"
+        },
+        "countries": {
+            "uae": "متحده عربي امارات",
+            "germany": "جرمني",
+            "canada": "کاناډا"
+        },
+        "statuses": {
+            "completed": "بشپړ شوی",
+            "shipping": "لیږدول کیږي",
+            "pending": "په تمه"
+        },
+        "summaryTitle": "د فعالیت لنډیز",
+        "thisMonth": "دا میاشت",
+        "summary": {
+            "shipped": "لیږل شوي بارونه",
+            "onTime": "په وخت تحویلي",
+            "satisfaction": "د پیرودونکو رضایت"
+        },
+        "recentNotes": "وروستي یادښتونه",
+        "internationalShipping": "نړیوال لیږد",
+        "internationalShippingText": "د دې میاشتې د صادراتو بهیر د پام وړ وده لري، او په موخه لرونکو بازارونو کې د تحویلیو کچه په دوامداره توګه لوړیږي.",
+        "moreDetails": "نور توضیحات"
+    },
+
+    "controlQuality": {
+        "title": "د کیفیت کنترول سیسټم",
+        "projectLabel": "پروژه",
+        "stats": {
+            "samples": "د نمونو شمېر",
+            "today": "نن",
+            "acceptanceRate": "د منلو کچه",
+            "inReview": "بیاکتنه کیږي",
+            "activeBadge": "فعاله",
+            "inReviewNote": "باید په راتلونکو ۲ ساعتونو کې وڅارل شي",
+            "issues": "ثبت شوي ستونزې",
+            "criticalBadge": "حساس",
+            "issuesNote": "۳ ټکي بیړني پاملرنې ته اړتیا لري"
+        },
+        "reviewEyebrow": "د کیفیت بیاکتنه",
+        "dailyReportTitle": "ورځنی راپور",
+        "newResultButton": "نوی پایله ثبت کړئ",
+        "checks": {
+            "colorCoating": "د رنګ او پوښښ کتنه",
+            "dimensions": "د اندازو کنترول",
+            "performance": "د فعالیت ازموینه"
+        },
+        "todayStatus": "د نن حالت",
+        "shortReport": "لنډ راپور",
+        "approvedSamples": "منل شوي نمونې",
+        "rejectedSamples": "رد شوي نمونې",
+        "avgReviewTime": "د بیاکتنې منځنی وخت",
+        "topSectionsEyebrow": "ترټولو فعالې برخې",
+        "reportsTitle": "د کیفیت کنترول راپورونه",
+        "showAll": "ټول وښایاست",
+        "sections": {
+            "production": "د تولید برخه",
+            "packaging": "د بسته‌بندۍ برخه",
+            "assembly": "د غونډونې برخه",
+            "delivery": "د تحویلۍ برخه"
+        }
+    },
+
+    "login": {
+        "title": "سیسټم ته ننوتل",
+        "subtitle": "مهرباني وکړئ د خپل حساب معلومات ولیکئ.",
+        "invalidCredentials": "بریښنالیک یا پټنوم ناسم دی.",
+        "emailLabel": "کارن‌نوم یا بریښنالیک",
+        "emailPlaceholder": "example@karpal.com",
+        "passwordLabel": "پټنوم",
+        "passwordPlaceholder": "خپل پټنوم ولیکئ",
+        "showPassword": "پټنوم ښکاره کړئ",
+        "hidePassword": "پټنوم پټ کړئ",
+        "rememberMe": "ما په یاد ولرئ",
+        "forgotPassword": "پټنوم مې هېر شوی",
+        "submitting": "ننوتل کیږي...",
+        "submit": "ننوتل",
+        "noAccount": "حساب نلرئ؟",
+        "signUp": "نوم لیکنه وکړئ"
+    }
+}
