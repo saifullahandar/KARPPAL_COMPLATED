@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { submitContactMessage } from "../../../services/contact";
 import { useDocumentTitle } from "../../../hooks/useDocumentTitle";
+import mapImage from "../../../assets/images/map.png";
 
 function Contact() {
     const { t, i18n } = useTranslation();
@@ -343,7 +344,7 @@ function Contact() {
                     <div className="relative h-[300px] overflow-hidden rounded-[25px] bg-green-100 sm:h-[400px]">
                         
                         <img
-                            src="/src/assets/images/Map.PNG"
+                            src={mapImage}
                             alt={t("contact.map.alt")}
                             className="h-full w-full object-cover"
                         />

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FcDocument } from "react-icons/fc";
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo_karppal.png";
 
 const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
@@ -61,7 +62,7 @@ function Nav() {
                 {/* DOM order is logical reading order (logo, then links Home → Login), so the
                     browser's dir (ltr for English, rtl for Dari/Pashto) mirrors it correctly. */}
                 <div className="mr-3 ml-3 w-13 sm:mx-10">
-                    <img className="" src="/src/assets/logo_karppal.png" alt="Karppal" />
+                    <img className="" src={logo} alt="Karppal" />
                 </div>
 
                 <nav

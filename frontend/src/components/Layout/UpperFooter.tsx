@@ -1,6 +1,7 @@
 import { Mail, Phone } from "lucide-react";
 import { FaLocationDot } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
+import mapImage from "../../assets/images/map.png";
 
 function UpperFooter() {
     const { t, i18n } = useTranslation();
@@ -29,7 +30,7 @@ function UpperFooter() {
                         >
                             <img
                                 className="h-full w-full rounded-3xl object-cover"
-                                src="/src/assets/images/Map.PNG"
+                                src={mapImage}
                                 alt={t("footer.mapAlt")}
                             />
                         </a>
