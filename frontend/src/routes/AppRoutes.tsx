@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import Home from "../pages/Home/Home"
 import About from "../pages/about/components/About"
 import MainLayout from "../components/Layout/MainLayout"
+import ScrollToTop from "../components/Layout/ScrollToTop"
 import Products from "../pages/Products/components/Products"
 import All from "../pages/All/components/All"
 import Services from "../pages/Services/components/Services"
@@ -24,6 +25,8 @@ function DashboardRedirect() {
 function AppRoutes() {
     return (
         <BrowserRouter>
+
+            <ScrollToTop />
 
             <Routes>
 
