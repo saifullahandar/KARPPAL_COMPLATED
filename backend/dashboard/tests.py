@@ -178,3 +178,39 @@ class AnalyticsDashboardAccessTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Today's Visitors")
         self.assertContains(response, "<div class=\"stat-value\">2</div>")
+
+
+class QualityOverviewAccessTests(TestCase):
+    def setUp(self):
+        self.customer = User.objects.create_user(email="customer3@test.af", password="Pass12345", role=User.Role.CUSTOMER)
+        self.staff = User.objects.create_user(email="staff3@test.af", password="Pass12345", role=User.Role.STAFF)
+
+    def test_anonymous_is_redirected(self):
+        response = self.client.get("/dashboard/quality/")
+        self.assertEqual(response.status_code, 302)
+
+    def test_customer_cannot_access(self):
+        self.client.force_login(self.customer)
+        response = self.client.get("/dashboard/quality/")
+        self.assertEqual(response.status_code, 403)
+
+    def test_staff_sees_empty_state(self):
+        self.client.force_login(self.staff)
+        response = self.client.get("/dashboard/quality/")
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "No quality reports yet.")
+
+    def test_staff_sees_latest_report(self):
+        from apps.quality.models import QualityDailyReport, QualityScore
+
+        report = QualityDailyReport.objects.create(samples_count=128, approved_count=112, rejected_count=16)
+        QualityScore.objects.create(report=report, score_type=QualityScore.ScoreType.CHECK, label="Color & Coating", percentage=98)
+        QualityScore.objects.create(report=report, score_type=QualityScore.ScoreType.SECTION, label="Packaging", percentage=95)
+
+        self.client.force_login(self.staff)
+        response = self.client.get("/dashboard/quality/")
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "<div class=\"stat-value\">128</div>")
+        self.assertContains(response, "87.5%")
+        self.assertContains(response, "Color &amp; Coating")
+        self.assertContains(response, "Packaging")

@@ -1,11 +1,24 @@
-import { ListCollapse, X } from "lucide-react";
+import { ChevronRight, LogIn, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FcDocument } from "react-icons/fc";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo_karppal.png";
+import { DASHBOARD_URL } from "../../services/apiClient";
 
 const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+// One list for the desktop bar and the mobile menu, so the two can never drift apart.
+const NAV_LINKS = [
+    { to: "/", key: "nav.home", end: true },
+    { to: "/about", key: "nav.about" },
+    { to: "/products", key: "nav.products" },
+    { to: "/services", key: "nav.services" },
+    { to: "/gallery", key: "nav.gallery" },
+    { to: "/research", key: "nav.research" },
+    { to: "/export", key: "nav.export" },
+    { to: "/jobs", key: "nav.jobchance" },
+    { to: "/contact", key: "nav.call" },
+];
 
 function Nav() {
     // FOR responsive
@@ -21,12 +34,28 @@ function Nav() {
     const getNavLinkClass = (isActive: boolean, extraClass = "") =>
         `${navLinkClass} ${extraClass} ${isActive ? "text-green-700 after:scale-x-100" : ""}`;
 
+    const getMobileLinkClass = (isActive: boolean) =>
+        `group flex items-center justify-between rounded-xl px-4 py-3 font-medium transition-colors ${isActive
+            ? "bg-green-50 text-green-700"
+            : "text-gray-800 hover:bg-gray-50 hover:text-green-700"
+        }`;
+
     // Moves focus into the drawer when it opens, so keyboard/screen-reader users land
     // somewhere meaningful instead of on a now-hidden hamburger button.
     useEffect(() => {
         if (open) {
             menuRef.current?.querySelector<HTMLElement>(FOCUSABLE_SELECTOR)?.focus();
         }
+    }, [open]);
+
+    // The page behind the open menu must not scroll along with it.
+    useEffect(() => {
+        if (!open) return;
+        const previous = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.body.style.overflow = previous;
+        };
     }, [open]);
 
     function closeMenu() {
@@ -58,169 +87,45 @@ function Nav() {
 
     return (
         <div className="fixed z-50 top-10 left-0 right-0 bg-white shadow-sm">
-            <div className="relative flex h-18 items-center justify-around px-4 sm:px-6 bg-white">
+            {/* Phones/tablets: logo at the start edge, menu button at the end edge.
+                Desktop (xl+, where all links fit on one line) keeps the spread-out bar. */}
+            <div className="relative flex h-18 items-center justify-between px-4 sm:px-6 xl:justify-around bg-white">
                 {/* DOM order is logical reading order (logo, then links Home → Login), so the
                     browser's dir (ltr for English, rtl for Dari/Pashto) mirrors it correctly. */}
-                <div className="mr-3 ml-3 w-13 sm:mx-10">
-                    <img className="" src={logo} alt="Karppal" />
-                </div>
+                <NavLink to="/" end className="flex shrink-0 items-center gap-2.5 xl:mx-10">
+                    <img src={logo} alt="" className="w-13" />
+                    <span className="text-xl font-extrabold tracking-tight text-green-800">
+                        {t("footer.company")}
+                    </span>
+                </NavLink>
 
                 <nav
-                    className="hidden items-center gap-7 text-[14px] lg:flex"
+                    className="hidden items-center gap-7 whitespace-nowrap text-[14px] xl:flex"
                     id="navbarNavDropdown"
                 >
-                    <NavLink
-                        to="/"
-                        end
-                        className={({ isActive }) => getNavLinkClass(isActive)}
-                    >
-                        {t("nav.home")}
-                    </NavLink>
-                    <NavLink
-                        to="/about"
-                        className={({ isActive }) => getNavLinkClass(isActive)}
-                    >
-                        {t("nav.about")}
-                    </NavLink>
-
-                    <div className="relative">
+                    {NAV_LINKS.map((link) => (
                         <NavLink
-                            to="/products"
-                            className={({ isActive }) => getNavLinkClass(isActive, "flex items-center")}
+                            key={link.to}
+                            to={link.to}
+                            end={link.end}
+                            className={({ isActive }) => getNavLinkClass(isActive)}
                         >
-                            {t("nav.products")}
+                            {t(link.key)}
                         </NavLink>
-                    </div>
-
-                    <NavLink
-                        to="/services"
-                        className={({ isActive }) => getNavLinkClass(isActive)}
+                    ))}
+                    <a
+                        className="group inline-flex items-center gap-2 rounded-lg bg-green-700 px-4 py-2 font-semibold text-white shadow-sm transition hover:bg-green-800 hover:shadow-md"
+                        href={DASHBOARD_URL}
                     >
-                        {t("nav.services")}
-                    </NavLink>
-                    <NavLink
-                        to="/control-quality"
-                        className={({ isActive }) => getNavLinkClass(isActive)}
-                    >
-                        {t("nav.controlquality")}
-                    </NavLink>
-                    <NavLink
-                        to="/gallery"
-                        className={({ isActive }) => getNavLinkClass(isActive)}
-                    >
-                        {t("nav.gallery")}
-                    </NavLink>
-                    <NavLink
-                        to="/research"
-                        className={({ isActive }) => getNavLinkClass(isActive)}
-                    >
-                        {t("nav.research")}
-                    </NavLink>
-                    <NavLink
-                        to="/export"
-                        className={({ isActive }) => getNavLinkClass(isActive)}
-                    >
-                        {t("nav.export")}
-                    </NavLink>
-                    <NavLink
-                        to="/jobs"
-                        className={({ isActive }) => getNavLinkClass(isActive)}
-                    >
-                        {t("nav.jobchance")}
-                    </NavLink>
-                    <NavLink
-                        to="/contact"
-                        className={({ isActive }) => getNavLinkClass(isActive)}
-                    >
-                        {t("nav.call")}
-                    </NavLink>
-                    <NavLink
-                        type="button"
-                        className="rounded-sm bg-green-700 px-4 py-1 text-zinc-50 hover:cursor-pointer hover:bg-green-600" to={"/login"}                    >
                         {t("nav.login")}
-                        <FcDocument className="inline pl-1 pr-1" size={32} />
-                    </NavLink>
+                        {/* Arrow points into the page: mirrored for rtl (Dari/Pashto). */}
+                        <LogIn
+                            size={18}
+                            aria-hidden="true"
+                            className="transition-transform group-hover:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5"
+                        />
+                    </a>
                 </nav>
-
-                {open && (
-                    <div
-                        id="mobile-nav-menu"
-                        ref={menuRef}
-                        role="dialog"
-                        aria-modal="true"
-                        aria-label={t("header.menuToggle")}
-                        onKeyDown={handleMenuKeyDown}
-                        onClick={(e) => {
-                            if ((e.target as HTMLElement).closest("a")) closeMenu();
-                        }}
-                        className="absolute end-0 top-full w-[85vw] max-w-[260px] rounded-lg bg-[#bfffb2] shadow-xl lg:hidden"
-                    >
-                        <nav className="flex flex-col space-y-4 px-6 py-4 text-center text-black">
-                            <NavLink
-                                to="/"
-                                end
-                                className={({ isActive }) => getNavLinkClass(isActive, "justify-center transition-colors duration-300 hover:text-green-600")}
-                            >
-                                {t("nav.home")}
-                            </NavLink>
-                            <NavLink
-                                to="/about"
-                                className={({ isActive }) => getNavLinkClass(isActive, "justify-center transition-colors duration-300 hover:text-green-600")}
-                            >
-                                {t("nav.about")}
-                            </NavLink>
-                            <NavLink
-                                to="/products"
-                                className={({ isActive }) => getNavLinkClass(isActive, "justify-center transition-colors duration-300 hover:text-green-600")}
-                            >
-                                {t("nav.products")}
-                            </NavLink>
-
-                            <NavLink
-                                to="/services"
-                                className={({ isActive }) => getNavLinkClass(isActive, "justify-center transition-colors duration-300 hover:text-green-600")}
-                            >
-                                {t("nav.services")}
-                            </NavLink>
-                            <NavLink
-                                to="/control-quality"
-                                className={({ isActive }) => getNavLinkClass(isActive, "justify-center transition-colors duration-300 hover:text-green-600")}
-                            >
-                                {t("nav.controlquality")}
-                            </NavLink>
-                            <NavLink
-                                to="/gallery"
-                                className={({ isActive }) => getNavLinkClass(isActive, "justify-center transition-colors duration-300 hover:text-green-600")}
-                            >
-                                {t("nav.gallery")}
-                            </NavLink>
-                            <NavLink
-                                to="/research"
-                                className={({ isActive }) => getNavLinkClass(isActive, "justify-center transition-colors duration-300 hover:text-green-600")}
-                            >
-                                {t("nav.research")}
-                            </NavLink>
-                            <NavLink
-                                to="/export"
-                                className={({ isActive }) => getNavLinkClass(isActive, "justify-center transition-colors duration-300 hover:text-green-600")}
-                            >
-                                {t("nav.export")}
-                            </NavLink>
-                            <NavLink
-                                to="/jobs"
-                                className={({ isActive }) => getNavLinkClass(isActive, "justify-center transition-colors duration-300 hover:text-green-600")}
-                            >
-                                {t("nav.jobchance")}
-                            </NavLink>
-                            <NavLink
-                                to="/contact"
-                                className={({ isActive }) => getNavLinkClass(isActive, "justify-center transition-colors duration-300 hover:text-green-600")}
-                            >
-                                {t("nav.call")}
-                            </NavLink>
-                        </nav>
-                    </div>
-                )}
 
                 <button
                     type="button"
@@ -228,11 +133,64 @@ function Nav() {
                     aria-label={t("header.menuToggle")}
                     aria-expanded={open}
                     aria-controls="mobile-nav-menu"
-                    className="p-2 text-green-700 lg:hidden"
+                    className={`rounded-xl p-2 transition-colors xl:hidden ${open
+                        ? "bg-green-700 text-white"
+                        : "text-green-700 ring-1 ring-green-200 hover:bg-green-50"
+                        }`}
                     onClick={() => (open ? closeMenu() : setOpen(true))}
                 >
-                    {open ? <X size={28} /> : <ListCollapse size={28} />}
+                    {open ? <X size={24} /> : <Menu size={24} />}
                 </button>
+
+                {open && (
+                    <>
+                        {/* Dims the page below the header + nav (h-10 + h-18 = 7rem); a tap closes the menu. */}
+                        <div
+                            aria-hidden="true"
+                            className="fixed inset-x-0 bottom-0 top-28 bg-black/40 xl:hidden"
+                            onClick={closeMenu}
+                        />
+                        <div
+                            id="mobile-nav-menu"
+                            ref={menuRef}
+                            role="dialog"
+                            aria-modal="true"
+                            aria-label={t("header.menuToggle")}
+                            onKeyDown={handleMenuKeyDown}
+                            onClick={(e) => {
+                                if ((e.target as HTMLElement).closest("a")) closeMenu();
+                            }}
+                            className="absolute inset-x-0 top-full max-h-[calc(100dvh-7rem)] overflow-y-auto rounded-b-2xl border-t border-green-100 bg-white shadow-xl xl:hidden"
+                        >
+                            <nav className="flex flex-col gap-1 p-3">
+                                {NAV_LINKS.map((link) => (
+                                    <NavLink
+                                        key={link.to}
+                                        to={link.to}
+                                        end={link.end}
+                                        className={({ isActive }) => getMobileLinkClass(isActive)}
+                                    >
+                                        {t(link.key)}
+                                        <ChevronRight
+                                            size={18}
+                                            aria-hidden="true"
+                                            className="text-gray-300 transition group-hover:text-green-600 rtl:-scale-x-100"
+                                        />
+                                    </NavLink>
+                                ))}
+                            </nav>
+                            <div className="border-t border-gray-100 p-3">
+                                <a
+                                    href={DASHBOARD_URL}
+                                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-green-700 px-4 py-3 font-semibold text-white shadow-sm transition hover:bg-green-800"
+                                >
+                                    {t("nav.login")}
+                                    <LogIn size={18} aria-hidden="true" className="rtl:-scale-x-100" />
+                                </a>
+                            </div>
+                        </div>
+                    </>
+                )}
             </div>
         </div>
 

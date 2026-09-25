@@ -10,6 +10,7 @@ urlpatterns = [
     path("logout/", views.DashboardLogoutView.as_view(), name="logout"),
     path("settings/company-info/", views.CompanyInfoUpdateView.as_view(), name="company-info"),
     path("analytics/", views.AnalyticsDashboardView.as_view(), name="analytics"),
+    path("quality/", views.QualityOverviewView.as_view(), name="quality"),
     path("<slug:module>/", views.ModuleListView.as_view(), name="module-list"),
     path("<slug:module>/add/", views.ModuleCreateView.as_view(), name="module-add"),
     path("<slug:module>/<int:pk>/edit/", views.ModuleUpdateView.as_view(), name="module-edit"),

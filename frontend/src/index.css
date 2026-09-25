@@ -1,1 +1,37 @@
 @import 'tailwindcss';
+
+/* Dari and Pashto pages: Vazirmatn first, so digits and Latin words inside
+   Persian-script text match its style. <html lang> is set by src/i18n. */
+html:lang(fa),
+html:lang(ps) {
+    font-family: var(--font-persian);
+}
+
+/* Home hero carousel (components/Home/Slider.tsx) */
+@theme {
+    /* Latin text uses Plus Jakarta Sans; Dari/Pashto glyphs fall through to Vazirmatn. */
+    --font-sans: "Plus Jakarta Sans", "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+    --font-persian: "Vazirmatn", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+    --animate-hero-zoom: hero-zoom 9s ease-out forwards;
+    --animate-hero-rise: hero-rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    --animate-hero-progress: hero-progress linear forwards;
+    --animate-hero-shimmer: hero-shimmer 1.6s ease-in-out infinite;
+
+    @keyframes hero-zoom {
+        from { transform: scale(1.12); }
+        to { transform: scale(1); }
+    }
+    @keyframes hero-rise {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes hero-shimmer {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(100%); }
+    }
+    @keyframes hero-progress {
+        from { transform: scaleX(0); }
+        to { transform: scaleX(1); }
+    }
+}

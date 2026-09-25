@@ -23,7 +23,7 @@ function Products() {
             lang={i18n.language === "en" ? "en" : `${i18n.language}-AF`}
             className="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top,_#f6fff9,_#ebfdf5_18%,_#f8fafc_58%,_#f0fdf4_100%)] text-slate-800"
         >
-            <div className="mx-auto max-w-7xl px-4 py-8 sm:mt-14 sm:px-6 sm:py-10 lg:px-8">
+            <div className="mx-auto mt-25 max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
 
                 {/* Header */}
                 <header className="relative mt-6 mb-8 overflow-hidden rounded-[36px] border border-green-200/70 bg-gradient-to-br from-green-700 via-green-600 to-emerald-500 p-6 text-white shadow-[0_30px_80px_rgba(22,163,74,0.28)] sm:p-8">

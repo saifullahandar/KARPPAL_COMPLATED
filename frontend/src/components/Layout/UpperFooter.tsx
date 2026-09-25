@@ -2,6 +2,7 @@ import { Mail, Phone } from "lucide-react";
 import { FaLocationDot } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 import mapImage from "../../assets/images/map.png";
+import logo from "../../assets/logo_karppal.png";
 
 function UpperFooter() {
     const { t, i18n } = useTranslation();
@@ -150,8 +151,8 @@ function UpperFooter() {
 
                         <div className="flex items-center justify-start gap-3">
 
-                            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-lime-300 via-green-500 to-green-700 text-2xl font-black text-white shadow-[0_16px_30px_rgba(22,163,74,0.45)] ring-4 ring-green-200/10">
-                                ک
+                            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white p-1.5 shadow-[0_16px_30px_rgba(22,163,74,0.45)] ring-4 ring-green-200/10">
+                                <img src={logo} alt="" className="h-full w-full object-contain" />
                             </div>
 
                             <div>

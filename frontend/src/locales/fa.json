@@ -8,7 +8,6 @@
     "nav.export": "صادرات",
     "nav.research": "تحقیقات",
     "nav.gallery": "گالری",
-    "nav.controlquality": "کنتروبل کیفیت",
     "nav.services": "خدمات",
     "nav.products": "محصولات",
     "nav.about": "در باره ما",
@@ -20,6 +19,9 @@
     "slider.goToSlide": "رفتن به اسلاید {{n}}",
     "slider.previousSlide": "اسلاید قبلی",
     "slider.nextSlide": "اسلاید بعدی",
+    "slider.defaultTitle": "محصولات زراعتی و حیوانی کارپال",
+    "slider.defaultSubtitle": "محصولات طبیعی لبنی و زراعتی، تولید شده با بالاترین معیارهای کیفیت.",
+    "slider.badge": "تولید و پروسس محصولات زراعتی و حیوانی",
 
     "common.retry": "تلاش مجدد",
     "common.loading": "در حال بارگذاری...",
@@ -211,8 +213,6 @@
         "error": "بارگذاری خدمات ممکن نشد. لطفاً بعداً دوباره تلاش کنید."
     },
 
-
-
     "contact": {
         "hero": {
             "badge": "تماس با ما",
@@ -378,6 +378,7 @@
         "liveBadge": "زنده",
         "monitoringTitle": "نظارت بر صادرات",
         "activeBadge": "فعال",
+
         "stats": {
             "totalExports": "مجموع صادرات",
             "totalExportsGrowth": "+۱۲.۴٪ نسبت به ماه قبلی",
@@ -417,59 +418,9 @@
         "moreDetails": "جزئیات بیشتر"
     },
 
-    "controlQuality": {
-        "title": "سیستم کنترول کیفیت",
-        "projectLabel": "پروژه",
-        "stats": {
-            "samples": "تعداد نمونه‌ها",
-            "today": "امروز",
-            "acceptanceRate": "نرخ پذیرش",
-            "inReview": "در حال بررسی",
-            "activeBadge": "فعال",
-            "inReviewNote": "باید در ۲ ساعت آینده بررسی شود",
-            "issues": "مشکلات ثبت‌شده",
-            "criticalBadge": "حساس",
-            "issuesNote": "۳ مورد نیاز به پیگیری فوری دارد"
-        },
-        "reviewEyebrow": "بازبینی کیفیت",
-        "dailyReportTitle": "کارنامه روزانه",
-        "newResultButton": "ثبت نتیجه جدید",
-        "checks": {
-            "colorCoating": "بررسی رنگ و روکش",
-            "dimensions": "کنترل ابعاد و اندازه",
-            "performance": "تست عملکرد"
-        },
-        "todayStatus": "وضعیت امروز",
-        "shortReport": "گزارش کوتاه",
-        "approvedSamples": "تعداد نمونه‌های تأیید شده",
-        "rejectedSamples": "تعداد ردشدگی‌ها",
-        "avgReviewTime": "میانگین زمان بررسی",
-        "topSectionsEyebrow": "لیست فعال‌ترین بخش‌ها",
-        "reportsTitle": "گزارش‌های کنترل کیفیت",
-        "showAll": "نمایش همه",
-        "sections": {
-            "production": "بخش تولید",
-            "packaging": "بخش بسته‌بندی",
-            "assembly": "بخش مونتاژ",
-            "delivery": "بخش تحویل"
-        }
-    },
-
-    "login": {
-        "title": "ورود به سیستم",
-        "subtitle": "لطفاً اطلاعات حساب خود را وارد نمایید.",
-        "invalidCredentials": "ایمیل یا رمز عبور اشتباه است.",
-        "emailLabel": "نام کاربری یا ایمیل",
-        "emailPlaceholder": "example@karpal.com",
-        "passwordLabel": "رمز عبور",
-        "passwordPlaceholder": "رمز عبور خود را وارد کنید",
-        "showPassword": "نمایش رمز عبور",
-        "hidePassword": "پنهان کردن رمز عبور",
-        "rememberMe": "مرا به خاطر بسپار",
-        "forgotPassword": "رمز عبور را فراموش کرده‌ام",
-        "submitting": "در حال ورود...",
-        "submit": "ورود",
-        "noAccount": "حساب ندارید؟",
-        "signUp": "ثبت نام کنید"
+    "cta": {
+        "badge": "بیایید با هم همکاری کنیم",
+        "title": "به دنبال محصولات زراعتی و مالداری با کیفیت هستید؟",
+        "text": "از لبنیات تازه تا محصولات آماده صادرات، تیم ما آماده کمک به شماست. همین امروز با ما تماس بگیرید تا با هم رشد کنیم."
     }
 }

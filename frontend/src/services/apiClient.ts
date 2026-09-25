@@ -4,6 +4,10 @@ import i18n from "../i18n";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000/api/v1";
 
+// The staff dashboard is a server-rendered Django app on the backend's own origin with
+// its own session login, so "Login" links go there rather than to a React page.
+export const DASHBOARD_URL = `${baseURL.replace(/\/api\/v1\/?$/, "")}/dashboard/`;
+
 const apiClient = axios.create({
     baseURL,
     headers: {

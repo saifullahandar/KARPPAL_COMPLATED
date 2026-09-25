@@ -13,7 +13,7 @@ function About() {
         >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.15),_transparent_40%)]" />
 
-            <div className="relative mt-5 container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="relative mt-25 container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 
                 {/* Header */}
                 <div className="mx-auto mb-12 max-w-3xl text-center">

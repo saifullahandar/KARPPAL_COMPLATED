@@ -18,7 +18,7 @@ function JobChance() {
     };
 
     return (
-        <div dir={i18n.dir()} className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(22,163,74,0.16),_transparent_35%),linear-gradient(to_br,_#f0fdf4,_#ffffff,_#f8fafc)] text-slate-800">
+        <div dir={i18n.dir()} className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-white text-slate-800">
             <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 mt-25">
                 <header className="mb-10 overflow-hidden rounded-[32px] border border-green-200 bg-white/80 p-6 shadow-[0_20px_60px_-20px_rgba(22,163,74,0.25)] backdrop-blur-sm md:flex md:items-center md:justify-between">
                     <div className="relative z-10">

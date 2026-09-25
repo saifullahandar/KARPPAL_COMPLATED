@@ -8,7 +8,6 @@
     "nav.export": "صادرات",
     "nav.research": "څېړنې",
     "nav.gallery": "آلبوم",
-    "nav.controlquality": "د کیفیت کنترول",
     "nav.services": "زموږ خدمتونه",
     "nav.products": "زموږ محصولات",
     "nav.about": "زموږ په اړه",
@@ -20,6 +19,9 @@
     "slider.goToSlide": "دې سلاید ته لاړ شئ {{n}}",
     "slider.previousSlide": "پخوانی سلاید",
     "slider.nextSlide": "بل سلاید",
+    "slider.defaultTitle": "د کارپال زراعتي او حیواني محصولات",
+    "slider.defaultSubtitle": "طبیعي لبني او زراعتي محصولات، د کیفیت په لوړو معیارونو تولید شوي.",
+    "slider.badge": "د زراعتي او حیواني محصولاتو تولید او پروسس",
 
     "common.retry": "بیا هڅه وکړئ",
     "common.loading": "بارېږي...",
@@ -112,7 +114,6 @@
         "visionText": "موږ باور لرو چې باور، روڼتیا او ژمنتیا د بریالۍ همکارۍ تر ټولو مهم ارزښتونه دي. له همدې امله، تل هڅه کوو چې خپل خدمات د لوړو معیارونو او د مشتریانو د واقعي اړتیاوو مطابق وړاندې کړو."
     },
 
-
     "products": {
         "store": "KARPPAL STORE",
         "title": "زموږ محصولات",
@@ -170,8 +171,6 @@
         "error": "د محصولاتو بارول ونشول. مهرباني وکړئ وروسته بیا هڅه وکړئ."
     },
 
-
-
     "services": {
         "badge": "زموږ خدمتونه",
         "title": "ستاسو د سوداګرۍ د ودې لپاره مسلکي حل‌لارې",
@@ -213,8 +212,6 @@
         "empty": "تر اوسه هېڅ خدمت نشر شوی نه دی.",
         "error": "د خدمتونو بارول ونشول. مهرباني وکړئ وروسته بیا هڅه وکړئ."
     },
-
-
 
     "contact": {
         "hero": {
@@ -381,6 +378,7 @@
         "liveBadge": "سمدستي",
         "monitoringTitle": "د صادراتو څارنه",
         "activeBadge": "فعاله",
+
         "stats": {
             "totalExports": "ټول صادرات",
             "totalExportsGrowth": "+۱۲.۴٪ د تېر میاشتې په پرتله",
@@ -420,59 +418,9 @@
         "moreDetails": "نور توضیحات"
     },
 
-    "controlQuality": {
-        "title": "د کیفیت کنترول سیسټم",
-        "projectLabel": "پروژه",
-        "stats": {
-            "samples": "د نمونو شمېر",
-            "today": "نن",
-            "acceptanceRate": "د منلو کچه",
-            "inReview": "بیاکتنه کیږي",
-            "activeBadge": "فعاله",
-            "inReviewNote": "باید په راتلونکو ۲ ساعتونو کې وڅارل شي",
-            "issues": "ثبت شوي ستونزې",
-            "criticalBadge": "حساس",
-            "issuesNote": "۳ ټکي بیړني پاملرنې ته اړتیا لري"
-        },
-        "reviewEyebrow": "د کیفیت بیاکتنه",
-        "dailyReportTitle": "ورځنی راپور",
-        "newResultButton": "نوی پایله ثبت کړئ",
-        "checks": {
-            "colorCoating": "د رنګ او پوښښ کتنه",
-            "dimensions": "د اندازو کنترول",
-            "performance": "د فعالیت ازموینه"
-        },
-        "todayStatus": "د نن حالت",
-        "shortReport": "لنډ راپور",
-        "approvedSamples": "منل شوي نمونې",
-        "rejectedSamples": "رد شوي نمونې",
-        "avgReviewTime": "د بیاکتنې منځنی وخت",
-        "topSectionsEyebrow": "ترټولو فعالې برخې",
-        "reportsTitle": "د کیفیت کنترول راپورونه",
-        "showAll": "ټول وښایاست",
-        "sections": {
-            "production": "د تولید برخه",
-            "packaging": "د بسته‌بندۍ برخه",
-            "assembly": "د غونډونې برخه",
-            "delivery": "د تحویلۍ برخه"
-        }
-    },
-
-    "login": {
-        "title": "سیسټم ته ننوتل",
-        "subtitle": "مهرباني وکړئ د خپل حساب معلومات ولیکئ.",
-        "invalidCredentials": "بریښنالیک یا پټنوم ناسم دی.",
-        "emailLabel": "کارن‌نوم یا بریښنالیک",
-        "emailPlaceholder": "example@karpal.com",
-        "passwordLabel": "پټنوم",
-        "passwordPlaceholder": "خپل پټنوم ولیکئ",
-        "showPassword": "پټنوم ښکاره کړئ",
-        "hidePassword": "پټنوم پټ کړئ",
-        "rememberMe": "ما په یاد ولرئ",
-        "forgotPassword": "پټنوم مې هېر شوی",
-        "submitting": "ننوتل کیږي...",
-        "submit": "ننوتل",
-        "noAccount": "حساب نلرئ؟",
-        "signUp": "نوم لیکنه وکړئ"
+    "cta": {
+        "badge": "راځئ چې یوځای کار وکړو",
+        "title": "ایا د لوړ کیفیت کرنیز او مالدارۍ محصولات لټوئ؟",
+        "text": "له تازه لبنیاتو نیولې تر صادراتي محصولاتو پورې، زموږ ټیم ستاسو مرستې ته چمتو دی. نن له موږ سره اړیکه ونیسئ چې یوځای وده وکړو."
     }
 }

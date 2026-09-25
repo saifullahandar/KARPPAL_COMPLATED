@@ -6,7 +6,12 @@ import { getProducts } from "../../services/products";
 
 function Our_product() {
     const { t } = useTranslation();
-    const { data } = useFetch(() => getProducts({ featured: true, page_size: 5 }), []);
+    // Featured products first; if none are marked featured in the dashboard,
+    // fall back to the latest ones so the section is never empty.
+    const { data } = useFetch(async () => {
+        const featured = await getProducts({ featured: true, page_size: 5 });
+        return featured.results.length > 0 ? featured : getProducts({ page_size: 5 });
+    }, []);
     const products = data?.results ?? [];
 
     return (
@@ -23,13 +28,14 @@ function Our_product() {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                {/* Flex-wrap + centered so a short last row (or a single product) sits in the middle. */}
+                <div className="flex flex-wrap justify-center gap-6">
                     {products.map((product) => (
                         <div
                             key={product.id}
-                            className="group flex w-full flex-col items-center gap-3 rounded-[24px] border border-green-100 bg-white p-3 text-center shadow-[0_10px_30px_rgba(22,163,74,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_35px_rgba(22,163,74,0.18)] sm:gap-4 sm:p-4 lg:rounded-[28px]"
+                            className="group flex w-full flex-col items-center gap-4 rounded-[28px] border border-green-100 bg-white p-4 text-center shadow-[0_10px_30px_rgba(22,163,74,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_35px_rgba(22,163,74,0.18)] sm:w-[calc(50%-12px)] sm:p-5 lg:w-[calc(33.333%-16px)] lg:rounded-[32px]"
                         >
-                            <div className="flex h-32 w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-green-50 to-white ring-1 ring-green-100 transition-all duration-300 group-hover:ring-green-300 sm:h-36 lg:h-40">
+                            <div className="flex h-56 w-full items-center justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-green-50 to-white ring-1 ring-green-100 transition-all duration-300 group-hover:ring-green-300 sm:h-60 lg:h-72">
                                 <img
                                     src={product.image}
                                     alt={product.name}
@@ -37,11 +43,11 @@ function Our_product() {
                                 />
                             </div>
 
-                            <h3 className="text-base font-extrabold text-slate-800 sm:text-lg">{product.name}</h3>
+                            <h3 className="text-lg font-extrabold text-slate-800 sm:text-xl">{product.name}</h3>
 
                             <a
                                 href="/all"
-                                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-green-200 bg-white px-3 py-2 text-xs font-semibold text-green-700 transition-all duration-300 hover:bg-green-600 hover:text-white hover:shadow-lg hover:shadow-green-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:w-auto sm:px-4 sm:text-sm"
+                                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-green-200 bg-white px-3 py-2 text-xs font-semibold text-green-700 transition-all duration-300 hover:bg-green-600 hover:text-white hover:shadow-lg hover:shadow-green-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:w-auto sm:px-6 sm:py-2.5 sm:text-sm"
                             >
                                 <BiArrowBack className="text-base" />
                                 <span>{t("ourproduct.all.button")}</span>

@@ -1,0 +1,143 @@
+{% extends "dashboard/base.html" %}
+{% block title %}Quality Overview{% endblock %}
+{% block page_title %}Quality Overview{% endblock %}
+
+{% block content %}
+{% if not report %}
+    <div class="panel">
+        <div class="empty-state-block">
+            <i class="bi bi-clipboard-check"></i>
+            No quality reports yet.
+            <div class="mt-3">
+                <a class="btn btn-success btn-sm" href="{% url 'dashboard:module-add' 'qualitydailyreport' %}">
+                    <i class="bi bi-plus-lg"></i> Add today's report
+                </a>
+            </div>
+        </div>
+    </div>
+{% else %}
+
+<div class="list-toolbar">
+    <div class="text-muted small">
+        Latest report: <strong class="text-body">{{ report.date|date:"l, M j, Y" }}</strong>
+    </div>
+    <div class="d-flex gap-2">
+        <a class="btn btn-outline-secondary btn-sm" href="{% url 'dashboard:module-edit' 'qualitydailyreport' report.pk %}">
+            <i class="bi bi-pencil"></i> Edit report
+        </a>
+        <a class="btn btn-success btn-sm" href="{% url 'dashboard:module-add' 'qualitydailyreport' %}">
+            <i class="bi bi-plus-lg"></i> New report
+        </a>
+    </div>
+</div>
+
+<div class="stat-grid">
+    <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-eyedropper"></i></div>
+        <div>
+            <div class="stat-value">{{ report.samples_count }}</div>
+            <div class="stat-label">Samples Tested</div>
+        </div>
+    </div>
+    <div class="stat-card highlight">
+        <div class="stat-icon"><i class="bi bi-patch-check"></i></div>
+        <div>
+            <div class="stat-value">{{ report.acceptance_rate }}%</div>
+            <div class="stat-label">Acceptance Rate</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-hourglass-split"></i></div>
+        <div>
+            <div class="stat-value">{{ report.in_review_count }}</div>
+            <div class="stat-label">In Review</div>
+        </div>
+    </div>
+    <div class="stat-card qc-danger">
+        <div class="stat-icon"><i class="bi bi-exclamation-triangle"></i></div>
+        <div>
+            <div class="stat-value">{{ report.issues_count }}</div>
+            <div class="stat-label">Issues Found</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-check2-circle"></i></div>
+        <div>
+            <div class="stat-value">{{ report.approved_count }}</div>
+            <div class="stat-label">Approved Samples</div>
+        </div>
+    </div>
+    <div class="stat-card qc-danger">
+        <div class="stat-icon"><i class="bi bi-x-circle"></i></div>
+        <div>
+            <div class="stat-value">{{ report.rejected_count }}</div>
+            <div class="stat-label">Rejected Samples</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-stopwatch"></i></div>
+        <div>
+            <div class="stat-value">{{ report.avg_review_hours|floatformat:1 }}h</div>
+            <div class="stat-label">Avg. Review Time</div>
+        </div>
+    </div>
+</div>
+
+<div class="row-grid mt-4">
+    <div class="panel">
+        <div class="panel-header">
+            <h2>Quality Checks</h2>
+            <a href="{% url 'dashboard:module-list' 'qualityscore' %}">Manage</a>
+        </div>
+        {% for score in checks %}
+            <div class="qc-score">
+                <div class="qc-score-head">
+                    <span>{{ score.label }}</span>
+                    <strong>{{ score.percentage|floatformat:"-1" }}%</strong>
+                </div>
+                <div class="qc-meter"><div class="qc-meter-fill" style="width: {% widthratio score.percentage 100 100 %}%"></div></div>
+            </div>
+        {% empty %}
+            <p class="empty-state mb-0">No quality checks recorded for this report.</p>
+        {% endfor %}
+    </div>
+
+    <div class="panel">
+        <div class="panel-header">
+            <h2>Production Sections</h2>
+            <a href="{% url 'dashboard:module-list' 'qualityscore' %}">Manage</a>
+        </div>
+        {% for score in sections %}
+            <div class="qc-score">
+                <div class="qc-score-head">
+                    <span>{{ score.label }}</span>
+                    <strong>{{ score.percentage|floatformat:"-1" }}%</strong>
+                </div>
+                <div class="qc-meter"><div class="qc-meter-fill" style="width: {% widthratio score.percentage 100 100 %}%"></div></div>
+            </div>
+        {% empty %}
+            <p class="empty-state mb-0">No section scores recorded for this report.</p>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="panel mt-4">
+    <div class="panel-header">
+        <h2>Acceptance Rate — Recent Reports</h2>
+        <a href="{% url 'dashboard:module-list' 'qualitydailyreport' %}">All reports</a>
+    </div>
+    <div class="chart-bars">
+        {% for r in recent_reports %}
+            <div class="chart-bar" title="{{ r.date|date:'M j, Y' }} — {{ r.acceptance_rate }}% accepted ({{ r.approved_count }} approved, {{ r.rejected_count }} rejected)">
+                <span class="chart-bar-value">{{ r.acceptance_rate }}%</span>
+                <div class="chart-bar-fill" style="height: {% widthratio r.acceptance_rate 100 100 %}%"></div>
+                <span class="chart-bar-label">{{ r.date|date:"M j" }}</span>
+            </div>
+        {% endfor %}
+    </div>
+    {% if report.notes %}
+        <p class="small mt-3 mb-0"><strong>Notes:</strong> {{ report.notes|linebreaksbr }}</p>
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}

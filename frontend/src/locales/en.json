@@ -8,7 +8,6 @@
     "nav.export": "Export",
     "nav.research": "Research",
     "nav.gallery": "Gallery",
-    "nav.controlquality": "Quality Control",
     "nav.services": "Services",
     "nav.products": "Products",
     "nav.about": "About",
@@ -20,6 +19,9 @@
     "slider.goToSlide": "Go to slide {{n}}",
     "slider.previousSlide": "Previous slide",
     "slider.nextSlide": "Next slide",
+    "slider.defaultTitle": "Karppal Agro-Animal Products",
+    "slider.defaultSubtitle": "Natural dairy and agricultural products, produced to the highest quality standards.",
+    "slider.badge": "Agro-Animal Production & Processing",
 
     "common.retry": "Try Again",
     "common.loading": "Loading...",
@@ -211,7 +213,6 @@
         "error": "Unable to load services. Please try again later."
     },
 
-
     "contact": {
         "hero": {
             "badge": "Contact Us",
@@ -377,6 +378,7 @@
         "liveBadge": "LIVE",
         "monitoringTitle": "Export Monitoring",
         "activeBadge": "Active",
+
         "stats": {
             "totalExports": "Total Exports",
             "totalExportsGrowth": "+12.4% vs last month",
@@ -416,59 +418,9 @@
         "moreDetails": "More Details"
     },
 
-    "controlQuality": {
-        "title": "Quality Control System",
-        "projectLabel": "Project",
-        "stats": {
-            "samples": "Number of Samples",
-            "today": "Today",
-            "acceptanceRate": "Acceptance Rate",
-            "inReview": "In Review",
-            "activeBadge": "Active",
-            "inReviewNote": "Must be reviewed within the next 2 hours",
-            "issues": "Reported Issues",
-            "criticalBadge": "Critical",
-            "issuesNote": "3 items need urgent follow-up"
-        },
-        "reviewEyebrow": "Quality Review",
-        "dailyReportTitle": "Daily Report",
-        "newResultButton": "Record New Result",
-        "checks": {
-            "colorCoating": "Color & Coating Check",
-            "dimensions": "Dimension Control",
-            "performance": "Performance Test"
-        },
-        "todayStatus": "Today's Status",
-        "shortReport": "Short Report",
-        "approvedSamples": "Approved Samples",
-        "rejectedSamples": "Rejected Samples",
-        "avgReviewTime": "Average Review Time",
-        "topSectionsEyebrow": "Most Active Sections",
-        "reportsTitle": "Quality Control Reports",
-        "showAll": "Show All",
-        "sections": {
-            "production": "Production",
-            "packaging": "Packaging",
-            "assembly": "Assembly",
-            "delivery": "Delivery"
-        }
-    },
-
-    "login": {
-        "title": "Sign In",
-        "subtitle": "Please enter your account details.",
-        "invalidCredentials": "Incorrect email or password.",
-        "emailLabel": "Username or Email",
-        "emailPlaceholder": "example@karpal.com",
-        "passwordLabel": "Password",
-        "passwordPlaceholder": "Enter your password",
-        "showPassword": "Show password",
-        "hidePassword": "Hide password",
-        "rememberMe": "Remember me",
-        "forgotPassword": "Forgot password?",
-        "submitting": "Signing in...",
-        "submit": "Sign In",
-        "noAccount": "Don't have an account?",
-        "signUp": "Sign up"
+    "cta": {
+        "badge": "Let's work together",
+        "title": "Looking for quality agro-animal products?",
+        "text": "From fresh dairy to export-ready goods, our team is ready to help. Get in touch today and let's grow together."
     }
 }

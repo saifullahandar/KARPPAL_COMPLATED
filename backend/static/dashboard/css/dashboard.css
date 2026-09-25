@@ -246,3 +246,11 @@ body {
     .page-title { font-size: 17px; }
     .stat-value { font-size: 22px; }
 }
+
+/* ---------------- Quality overview ---------------- */
+.stat-card.qc-danger .stat-icon { background: rgba(220,38,38,.1); color: #b91c1c; }
+.qc-score { padding: 10px 0; }
+.qc-score-head { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px; }
+.qc-score-head strong { color: var(--kp-green-dark); }
+.qc-meter { height: 8px; border-radius: 999px; background: #e7f5ec; overflow: hidden; }
+.qc-meter-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--kp-green), #4ade80); }

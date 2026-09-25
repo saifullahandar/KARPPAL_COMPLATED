@@ -17,6 +17,7 @@ from apps.exports.models import ExportShipment
 from apps.gallery.models import GalleryItem
 from apps.jobs.models import JobApplication, JobPosting
 from apps.products.models import Product
+from apps.quality.models import QualityDailyReport, QualityScore
 from apps.research.models import ResearchArticle
 from apps.services.models import Service
 
@@ -254,5 +255,26 @@ class AnalyticsDashboardView(DashboardStaffRequiredMixin, LoginRequiredMixin, Te
 
         max_visitors = max((row["visitors"] for row in trend_30), default=0)
         ctx["chart_max"] = max(max_visitors, 1)  # avoid division by zero when there's no data yet
+        ctx["groups"] = grouped_modules()
+        return ctx
+
+
+class QualityOverviewView(DashboardStaffRequiredMixin, LoginRequiredMixin, TemplateView):
+    """Quality Control overview — the latest daily QC report as a scorecard,
+    plus acceptance rates for recent days. Internal data, so it lives here
+    rather than on the public website."""
+
+    template_name = "dashboard/quality.html"
+
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        recent = list(QualityDailyReport.objects.prefetch_related("scores")[:7])
+        report = recent[0] if recent else None
+        ctx["report"] = report
+        if report:
+            scores = list(report.scores.all())
+            ctx["checks"] = [s for s in scores if s.score_type == QualityScore.ScoreType.CHECK]
+            ctx["sections"] = [s for s in scores if s.score_type == QualityScore.ScoreType.SECTION]
+        ctx["recent_reports"] = list(reversed(recent))  # oldest first, for the chart
         ctx["groups"] = grouped_modules()
         return ctx

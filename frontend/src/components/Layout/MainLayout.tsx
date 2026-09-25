@@ -4,6 +4,7 @@ import { Outlet, useLocation } from "react-router-dom"
 import Header from "./Header"
 import UpperFooter from "./UpperFooter"
 import Nav from "./Nav"
+import CallToAction from "./CallToAction"
 import { trackPageView } from "../../services/analytics"
 
 
@@ -31,6 +32,8 @@ function MainLayout() {
             <main>
                 <Outlet />
             </main>
+
+            {location.pathname !== "/contact" && <CallToAction />}
 
             <UpperFooter />
         </>
