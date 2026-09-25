@@ -76,17 +76,16 @@ function Slider() {
                     <div
                         aria-busy="true"
                         aria-label={t("common.loading")}
-                        className="relative mt-6 h-[440px] overflow-hidden rounded-[28px] bg-green-950 shadow-[0_25px_70px_rgba(20,83,45,0.25)] sm:h-[460px] lg:h-[520px]"
+                        className="relative mt-6 h-[440px] overflow-hidden rounded-[28px] bg-gray-200 sm:h-[460px] lg:h-[520px]"
                     >
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,_rgba(74,222,128,0.18),_transparent_55%)]" />
-                        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent motion-safe:animate-hero-shimmer" />
+                        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent motion-safe:animate-hero-shimmer" />
                         <div className="relative flex h-full flex-col justify-end gap-4 px-6 pb-24 sm:justify-center sm:px-12 sm:pb-16 lg:px-20">
-                            <div className="h-7 w-52 rounded-full bg-white/15" />
-                            <div className="h-10 w-4/5 max-w-xl rounded-xl bg-white/15 lg:h-14" />
-                            <div className="h-5 w-3/5 max-w-md rounded-lg bg-white/10" />
+                            <div className="h-7 w-52 rounded-full bg-gray-300" />
+                            <div className="h-10 w-4/5 max-w-xl rounded-xl bg-gray-300 lg:h-14" />
+                            <div className="h-5 w-3/5 max-w-md rounded-lg bg-gray-300" />
                             <div className="mt-3 flex gap-3">
-                                <div className="h-12 w-44 rounded-full bg-green-500/40" />
-                                <div className="h-12 w-36 rounded-full bg-white/10" />
+                                <div className="h-12 w-44 rounded-full bg-gray-300" />
+                                <div className="h-12 w-36 rounded-full bg-gray-300" />
                             </div>
                         </div>
                     </div>
