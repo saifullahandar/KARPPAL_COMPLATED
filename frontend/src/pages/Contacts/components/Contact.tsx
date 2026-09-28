@@ -8,11 +8,14 @@ import {
     FaWhatsapp,
 } from "react-icons/fa";
 import { submitContactMessage } from "../../../services/contact";
+import { useCompanyInfo } from "../../../hooks/useCompanyInfo";
 import { useDocumentTitle } from "../../../hooks/useDocumentTitle";
+import { whatsappUrl } from "../../../services/core";
 import mapImage from "../../../assets/images/map.png";
 
 function Contact() {
     const { t, i18n } = useTranslation();
+    const company = useCompanyInfo();
     useDocumentTitle(`${t("contact.hero.title")} — ${t("footer.company")}`);
 
     const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
@@ -102,7 +105,7 @@ function Contact() {
                                         </h3>
 
                                         <p className="mt-1 text-sm leading-6 text-green-50">
-                                            {t("contact.info.address.text")}
+                                            {company?.address || t("contact.info.address.text")}
                                         </p>
                                     </div>
 
@@ -121,7 +124,7 @@ function Contact() {
                                         </h3>
 
                                         <p className="mt-1 text-sm text-green-50">
-                                            info@karppal.af
+                                            <a href={`mailto:${company?.email || "info@karppal.af"}`} dir="ltr">{company?.email || "info@karppal.af"}</a>
                                         </p>
                                     </div>
 
@@ -140,7 +143,7 @@ function Contact() {
                                         </h3>
 
                                         <p className="mt-1 text-sm text-green-50">
-                                            +93 780 194 632
+                                            <a href={`tel:${(company?.phone || "+93 780 194 632").replace(/\s/g, "")}`} dir="ltr">{company?.phone || "+93 780 194 632"}</a>
                                         </p>
                                     </div>
 
@@ -158,7 +161,7 @@ function Contact() {
                                 <div className="mt-4 flex gap-3">
 
                                     <a
-                                        href="https://www.facebook.com"
+                                        href={company?.facebook_url || "https://www.facebook.com"}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-green-600"
@@ -167,7 +170,7 @@ function Contact() {
                                     </a>
 
                                     <a
-                                        href="https://www.instagram.com"
+                                        href={company?.instagram_url || "https://www.instagram.com"}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-green-600"
@@ -176,7 +179,7 @@ function Contact() {
                                     </a>
 
                                     <a
-                                        href="https://www.linkedin.com"
+                                        href={company?.linkedin_url || "https://www.linkedin.com"}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-green-600"
@@ -185,7 +188,7 @@ function Contact() {
                                     </a>
 
                                     <a
-                                        href="https://www.whatsapp.com"
+                                        href={company?.whatsapp_url || whatsappUrl(company?.whatsapp || company?.phone) || "https://www.whatsapp.com"}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-green-600"
@@ -344,7 +347,7 @@ function Contact() {
                     <div className="relative h-[300px] overflow-hidden rounded-[25px] bg-green-100 sm:h-[400px]">
                         
                         <img
-                            src={mapImage}
+                            src={company?.map_image || mapImage}
                             alt={t("contact.map.alt")}
                             className="h-full w-full object-cover"
                         />
@@ -352,7 +355,7 @@ function Contact() {
                         <div className="absolute inset-0 flex items-end pb-3 justify-center bg-green-900/10">
 
                             <a
-                                href="https://maps.app.goo.gl/r1M2JF3MkEAL9h8M9"
+                                href={company?.map_url || "https://maps.app.goo.gl/r1M2JF3MkEAL9h8M9"}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex opacity-70 items-center gap-2 rounded-full bg-green-600 px-6 py-3 font-bold text-white shadow-xl transition hover:-translate-y-1 hover:bg-green-500 hover:opacity-100"

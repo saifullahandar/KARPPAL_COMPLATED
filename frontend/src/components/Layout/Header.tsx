@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { BiMailSend } from 'react-icons/bi'
 import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 
+import { useCompanyInfo } from '../../hooks/useCompanyInfo'
 import { setStoredLanguage } from '../../i18n/languageStorage'
+import { whatsappUrl } from '../../services/core'
 
 
 function Header() {
@@ -22,6 +24,8 @@ function Header() {
 
 
     const { t } = useTranslation()
+    const company = useCompanyInfo()
+    const whatsappLink = company?.whatsapp_url || whatsappUrl(company?.whatsapp || company?.phone)
     return (
         <>
             {/* Exactly h-10 on every screen: the nav below is fixed at top-10, so this bar
@@ -30,7 +34,7 @@ function Header() {
                 <div className="mx-auto flex h-10 max-w-7xl items-center justify-between gap-2 px-3 text-white sm:px-4">
                     <div className="hidden items-center gap-4 md:flex">
                         <a
-                            href="/contact"
+                            href={company?.email ? `mailto:${company.email}` : '/contact'}
                             className="inline-flex items-center gap-2 rounded-md px-2 py-1 text-sm font-semibold transition hover:bg-green-600/40"
                         >
                             <BiMailSend className="h-5 w-5" />
@@ -38,7 +42,7 @@ function Header() {
                         </a>
 
                         <a
-                            href="/contact"
+                            href={whatsappLink || '/contact'}
                             className="inline-flex items-center gap-2 rounded-md px-2 py-1 text-sm font-semibold transition hover:bg-green-600/40"
                         >
                             <FaWhatsapp className="h-5 w-5" />
@@ -48,14 +52,15 @@ function Header() {
 
                     <div className="flex items-center gap-0.5 sm:gap-2 md:mx-auto">
                         {[
-                            { label: 'Facebook', Icon: FaFacebook },
-                            { label: 'Instagram', Icon: FaInstagram },
-                            { label: 'LinkedIn', Icon: FaLinkedin },
-                            { label: 'WhatsApp', Icon: FaWhatsapp },
-                        ].map(({ label, Icon }) => (
+                            { label: 'Facebook', Icon: FaFacebook, url: company?.facebook_url },
+                            { label: 'Instagram', Icon: FaInstagram, url: company?.instagram_url },
+                            { label: 'LinkedIn', Icon: FaLinkedin, url: company?.linkedin_url },
+                            { label: 'WhatsApp', Icon: FaWhatsapp, url: whatsappLink },
+                        ].map(({ label, Icon, url }) => (
                             <a
                                 key={label}
-                                href="/contact"
+                                href={url || '/contact'}
+                                {...(url ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                                 aria-label={label}
                                 className="rounded-full p-1.5 transition hover:bg-white/15"
                             >

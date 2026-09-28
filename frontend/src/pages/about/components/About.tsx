@@ -1,9 +1,11 @@
 import { GiEyeTarget, GiPoliceOfficerHead } from "react-icons/gi";
 import { useTranslation } from "react-i18next";
+import { useCompanyInfo } from "../../../hooks/useCompanyInfo";
 import { useDocumentTitle } from "../../../hooks/useDocumentTitle";
 
 function About() {
     const { t, i18n } = useTranslation();
+    const company = useCompanyInfo();
     useDocumentTitle(`${t("about.title")} — ${t("footer.company")}`);
 
     return (
@@ -32,7 +34,7 @@ function About() {
                 <div className="mb-12 rounded-[28px] border border-emerald-100 bg-white/80 p-6 shadow-[0_20px_60px_-25px_rgba(16,185,129,0.35)] backdrop-blur-sm md:p-8">
 
                     <p className="mx-auto max-w-4xl text-lg leading-8 text-slate-600 md:text-xl">
-                        {t("about.description")}
+                        {company?.description || t("about.description")}
                     </p>
 
                 </div>
@@ -56,7 +58,7 @@ function About() {
                         </h2>
 
                         <p className="text-base leading-8 text-slate-600">
-                            {t("about.missionText")}
+                            {company?.mission || t("about.missionText")}
                         </p>
 
                     </div>
@@ -73,7 +75,7 @@ function About() {
                         </h2>
 
                         <p className="text-base leading-8 text-slate-600">
-                            {t("about.visionText")}
+                            {company?.vision || t("about.visionText")}
                         </p>
 
                     </div>

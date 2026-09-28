@@ -3,9 +3,11 @@ import { FaLocationDot } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 import mapImage from "../../assets/images/map.png";
 import logo from "../../assets/logo_karppal.png";
+import { useCompanyInfo } from "../../hooks/useCompanyInfo";
 
 function UpperFooter() {
     const { t, i18n } = useTranslation();
+    const company = useCompanyInfo();
 
     return (
         <footer
@@ -25,13 +27,13 @@ function UpperFooter() {
                     {/* Map */}
                     <div className="group p-5 transition-all duration-300">
                         <a
-                            href="https://maps.app.goo.gl/r1M2JF3MkEAL9h8M9"
+                            href={company?.map_url || "https://maps.app.goo.gl/r1M2JF3MkEAL9h8M9"}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <img
                                 className="h-full w-full rounded-3xl object-cover"
-                                src={mapImage}
+                                src={company?.map_image || mapImage}
                                 alt={t("footer.mapAlt")}
                             />
                         </a>
@@ -51,7 +53,7 @@ function UpperFooter() {
                                 </div>
 
                                 <span className="leading-7">
-                                    {t("footer.address")}
+                                    {company?.address || t("footer.address")}
                                 </span>
                             </li>
 
@@ -61,7 +63,7 @@ function UpperFooter() {
                                 </div>
 
                                 <span dir="ltr">
-                                    Kappal@admin.af
+                                    {company?.email || "info@karppal.af"}
                                 </span>
                             </li>
 
@@ -71,7 +73,7 @@ function UpperFooter() {
                                 </div>
 
                                 <span dir="ltr">
-                                    +93 780 194 632
+                                    {company?.phone || "+93 780 194 632"}
                                 </span>
                             </li>
 
@@ -152,16 +154,16 @@ function UpperFooter() {
                         <div className="flex items-center justify-start gap-3">
 
                             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white p-1.5 shadow-[0_16px_30px_rgba(22,163,74,0.45)] ring-4 ring-green-200/10">
-                                <img src={logo} alt="" className="h-full w-full object-contain" />
+                                <img src={company?.logo || logo} alt="" className="h-full w-full object-contain" />
                             </div>
 
                             <div>
                                 <p className="text-2xl font-black tracking-wide text-white">
-                                    {t("footer.company")}
+                                    {company?.name || t("footer.company")}
                                 </p>
 
                                 <p className="text-sm text-green-100">
-                                    {t("footer.companyDescription")}
+                                    {company?.tagline || t("footer.companyDescription")}
                                 </p>
                             </div>
 

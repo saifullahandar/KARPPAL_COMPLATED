@@ -1,10 +1,13 @@
+import { CompanyInfoProvider } from "./hooks/useCompanyInfo"
 import AppRoutes from "./routes/AppRoutes"
 
 
 function App() {
   return (
     <div>
-      <AppRoutes />
+      <CompanyInfoProvider>
+        <AppRoutes />
+      </CompanyInfoProvider>
     </div>
   )
 }
